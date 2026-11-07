@@ -1,0 +1,87 @@
+name: Test and Deploy Web
+
+# How deploys work:
+#   Hostinger's Node.js Web App hosting is connected to this repository's `production` branch and
+#   rebuilds the site on every push to it. Nobody pushes to `production` by hand: this workflow moves
+#   it to the tested commit, and only after every check below passes on `main`. A red test never
+#   reaches the live site.
+#
+# Pull requests run the checks only. Re-deploy or roll back with "Run workflow" (it deploys the
+# chosen branch's commit once its checks pass).
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write # to move the production branch
+
+# Checks of a pull request: a newer commit cancels the older run.
+# Deploys: never two at once, and a newer push waits for the running one.
+concurrency:
+  group: ${{ github.event_name == 'pull_request' && format('tests-{0}', github.ref) || 'deploy-production' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 2. Setup pnpm (version from package.json "packageManager")
+        uses: pnpm/action-setup@v4
+
+      - name: 3. Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: 4. Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: 5. Lint, Type-check and Test
+        run: |
+          pnpm lint
+          pnpm typecheck
+          pnpm test
+
+      - name: 6. Build the standalone server (the same kind of build Hostinger makes)
+        env:
+          NEXT_OUTPUT: standalone
+          API_BASE_URL: ${{ vars.API_BASE_URL || 'https://crm-api.mkdir-solutions.com/api/v1' }}
+        run: |
+          pnpm --filter @crm/app build
+          test -f apps/app/.next/standalone/apps/app/server.js
+
+  deploy:
+    needs: test
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 2. Move the production branch to the tested commit (Hostinger deploys it)
+        # The exact commit that just passed the checks is pushed, never a newer one. A push made with
+        # the workflow's token still reaches Hostinger's GitHub App; it only doesn't start workflows.
+        # --force lets "Run workflow" on an older branch roll the site back.
+        run: |
+          git push --force origin "${GITHUB_SHA}:refs/heads/production"
+          echo "production → ${GITHUB_SHA}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Hostinger now builds this commit; its progress is under Deployments in hPanel." >> "$GITHUB_STEP_SUMMARY"
+
+# ---------------------------------------------------------------------------------------------------
+# Hostinger setup (once, in hPanel), after the first run on main has created the production branch:
+#   Websites → Add website → Node.js apps → Import Git repository → this repo, branch: production.
+#   Framework: Next.js · Root directory: ./ · Build command: pnpm --filter @crm/app build
+#   Output directory: apps/app/.next · Node.js version: 22
+#   Environment variable: API_BASE_URL=https://crm-api.mkdir-solutions.com/api/v1
+#   Domain: crm.mkdir-solutions.com, added as its own website (not a subfolder); SSL is automatic.
+# ---------------------------------------------------------------------------------------------------
