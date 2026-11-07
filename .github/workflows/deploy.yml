@@ -9,12 +9,16 @@ name: Deploy Web to Hostinger VPS
 on:
   push:
     branches: [ main ]
+  # Pull requests into main run the checks only; the deploy job is skipped for them.
+  pull_request:
+    branches: [ main ]
   workflow_dispatch:
 
 # Never run two deploys at the same time; a newer push waits for the running one.
+# A pull request gets its own group, and a newer commit cancels its older check run.
 concurrency:
-  group: deploy-production
-  cancel-in-progress: false
+  group: ${{ github.event_name == 'pull_request' && format('tests-{0}', github.ref) || 'deploy-production' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 env:
   DEPLOY_PATH: ${{ vars.DEPLOY_PATH || format('/home/{0}/crm-web', secrets.SSH_USER) }}
@@ -48,6 +52,7 @@ jobs:
 
   build-and-deploy:
     needs: test
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
 
     steps:
