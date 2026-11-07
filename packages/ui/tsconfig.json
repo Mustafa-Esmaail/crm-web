@@ -1,0 +1,5 @@
+{
+  "extends": "@crm/config/tsconfig/library",
+  "compilerOptions": { "paths": { "@/*": ["./src/*"] } },
+  "include": ["src"]
+}

@@ -1,0 +1,5 @@
+@import '@crm/ui/styles/globals.css';
+
+/* Tailwind only scans the file's own package by default; point it at the app and the shared UI. */
+@source '../';
+@source '../../../../packages/ui/src';

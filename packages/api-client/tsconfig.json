@@ -1,0 +1,4 @@
+{
+  "extends": "@crm/config/tsconfig/base",
+  "include": ["src"]
+}
