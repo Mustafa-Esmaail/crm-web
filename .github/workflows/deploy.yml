@@ -103,6 +103,8 @@ jobs:
           # Excluded paths are never uploaded AND never deleted on the server: the .env written by hand
           # on the VPS and the PM2 logs survive every deploy. No spaces between entries.
           EXCLUDE: "/.env,/logs/"
+          # Without this the action ignores a failing script and still reports success.
+          SCRIPT_AFTER_REQUIRED: true
           SCRIPT_AFTER: |
             set -e
             cd "${{ env.DEPLOY_PATH }}"
