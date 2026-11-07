@@ -50,6 +50,14 @@ jobs:
           pnpm typecheck
           pnpm test
 
+      - name: 6. Build the standalone server (catches build errors before merge)
+        env:
+          NEXT_OUTPUT: standalone
+          API_BASE_URL: ${{ vars.API_BASE_URL || 'https://crm-api.mkdir-solutions.com/api/v1' }}
+        run: |
+          pnpm --filter @crm/app build
+          test -f apps/app/.next/standalone/apps/app/server.js
+
   build-and-deploy:
     needs: test
     if: github.event_name != 'pull_request'
