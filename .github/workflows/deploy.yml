@@ -1,0 +1,156 @@
+name: Deploy Web to Hostinger VPS
+
+# The web app is a Next.js server (it signs in and proxies the API on the server side), so it runs
+# on the VPS under PM2 behind nginx. One-time server setup is at the end of this file.
+# GitHub secrets: SSH_KEY, SSH_HOST, SSH_USER, SSH_PORT.
+# GitHub variables (optional): DEPLOY_PATH (default /home/<SSH_USER>/crm-web),
+#                              PM2_NAME (default crm-web).
+
+on:
+  push:
+    branches: [ main ]
+  # Pull requests into main run the checks only; the deploy job is skipped for them.
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+# Never run two deploys at the same time; a newer push waits for the running one.
+# A pull request gets its own group, and a newer commit cancels its older check run.
+concurrency:
+  group: ${{ github.event_name == 'pull_request' && format('tests-{0}', github.ref) || 'deploy-production' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  DEPLOY_PATH: ${{ vars.DEPLOY_PATH || format('/home/{0}/crm-web', secrets.SSH_USER) }}
+  PM2_NAME: ${{ vars.PM2_NAME || 'crm-web' }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 2. Setup pnpm (version from package.json "packageManager")
+        uses: pnpm/action-setup@v4
+
+      - name: 3. Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: 4. Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: 5. Lint, Type-check and Test
+        run: |
+          pnpm lint
+          pnpm typecheck
+          pnpm test
+
+      - name: 6. Build the standalone server (catches build errors before merge)
+        env:
+          NEXT_OUTPUT: standalone
+          API_BASE_URL: ${{ vars.API_BASE_URL || 'https://crm-api.mkdir-solutions.com/api/v1' }}
+        run: |
+          pnpm --filter @crm/app build
+          test -f apps/app/.next/standalone/apps/app/server.js
+
+  build-and-deploy:
+    needs: test
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 2. Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: 3. Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: 4. Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: 5. Build (standalone server)
+        # API_BASE_URL is read again from the server's .env at runtime; the build only needs a valid URL
+        # because the env module validates it when pages are prerendered.
+        env:
+          NEXT_OUTPUT: standalone
+          API_BASE_URL: ${{ vars.API_BASE_URL || 'https://crm-api.mkdir-solutions.com/api/v1' }}
+        run: pnpm --filter @crm/app build
+
+      - name: 6. Assemble the release folder
+        # server.js does not include static assets; Next serves them once they sit next to it.
+        run: |
+          set -e
+          APP=apps/app
+          OUT=$APP/.next/standalone
+          mkdir -p $OUT/$APP/.next
+          cp -r $APP/.next/static $OUT/$APP/.next/static
+          if [ -d $APP/public ]; then cp -r $APP/public $OUT/$APP/public; fi
+          test -f $OUT/$APP/server.js
+
+      - name: 7. Deploy to the VPS via Rsync
+        uses: easingthemes/ssh-deploy@v5.1.0
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "apps/app/.next/standalone/"
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          REMOTE_PORT: ${{ secrets.SSH_PORT }}
+          TARGET: ${{ env.DEPLOY_PATH }}
+          # Excluded paths are never uploaded AND never deleted on the server: the .env written by hand
+          # on the VPS and the PM2 logs survive every deploy. No spaces between entries.
+          EXCLUDE: "/.env,/logs/"
+          # Without this the action ignores a failing script and still reports success.
+          SCRIPT_AFTER_REQUIRED: true
+          SCRIPT_AFTER: |
+            set -e
+            cd "${{ env.DEPLOY_PATH }}"
+
+            # .env lives only on the server (API_BASE_URL, PORT, NODE_ENV): never uploaded, never deleted.
+            test -f .env || { echo "ERROR: .env is missing in ${{ env.DEPLOY_PATH }}. Create it once by hand."; exit 1; }
+            mkdir -p logs
+
+            # The app reads its settings once at startup, so every deploy restarts it.
+            # `--env-file` makes Node load the server's .env (Node 20.6+).
+            if pm2 describe "${{ env.PM2_NAME }}" > /dev/null 2>&1; then
+              pm2 reload "${{ env.PM2_NAME }}" --update-env
+            else
+              pm2 start apps/app/server.js --name "${{ env.PM2_NAME }}" \
+                --cwd "${{ env.DEPLOY_PATH }}/apps/app" \
+                --node-args="--env-file=${{ env.DEPLOY_PATH }}/.env" \
+                --output "${{ env.DEPLOY_PATH }}/logs/out.log" \
+                --error "${{ env.DEPLOY_PATH }}/logs/error.log"
+            fi
+            pm2 save
+            pm2 describe "${{ env.PM2_NAME }}" | grep -E "status|restarts"
+
+# ---------------------------------------------------------------------------------------------------
+# One-time VPS setup
+#
+# 1. Install Node.js 22+ and PM2:  npm install -g pm2  &&  pm2 startup  (run the command it prints).
+# 2. Create the deploy folder and its .env (default path /home/<user>/crm-web):
+#      NODE_ENV=production
+#      PORT=3000
+#      HOSTNAME=127.0.0.1
+#      API_BASE_URL=https://crm-api.mkdir-solutions.com/api/v1
+# 3. nginx site for crm.mkdir-solutions.com, proxying to the app:
+#      location / {
+#        proxy_pass http://127.0.0.1:3000;
+#        proxy_set_header Host $host;
+#        proxy_set_header X-Forwarded-Proto $scheme;
+#        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+#      }
+#    then add HTTPS (e.g. certbot --nginx -d crm.mkdir-solutions.com).
+# 4. DNS: an A record for crm.mkdir-solutions.com pointing at the VPS.
+# ---------------------------------------------------------------------------------------------------

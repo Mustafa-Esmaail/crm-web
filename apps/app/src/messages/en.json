@@ -1,0 +1,1980 @@
+{
+  "common": {
+    "appName": "Smart CRM",
+    "save": "Save",
+    "cancel": "Cancel",
+    "optional": "optional",
+    "close": "Close"
+  },
+  "nav": {
+    "label": "Main navigation",
+    "comingSoon": "Soon",
+    "sections": {
+      "sales": "Sales",
+      "organization": "Organization",
+      "admin": "Administration"
+    },
+    "items": {
+      "home": "Dashboard",
+      "leads": "Leads",
+      "deals": "Deals",
+      "units": "Units",
+      "employees": "Employees",
+      "departments": "Departments",
+      "teams": "Teams",
+      "branches": "Branches",
+      "orgChart": "Org chart",
+      "roles": "Roles",
+      "auditLog": "Activity log",
+      "settings": "Settings",
+      "tasks": "Tasks",
+      "projects": "Projects",
+      "pipelineSettings": "Sales pipeline",
+      "exportRequests": "Export requests",
+      "channels": "Channels",
+      "security": "Security",
+      "clinicServices": "Services",
+      "clinicAppointments": "Appointments",
+      "educationCourses": "Courses",
+      "educationEnrollments": "Enrollments",
+      "automotiveVehicles": "Vehicles",
+      "automotiveTestDrives": "Test drives",
+      "agencyPackages": "Packages",
+      "agencyEngagements": "Engagements"
+    }
+  },
+  "shell": {
+    "appName": "Smart CRM",
+    "tagline": "Customer management platform",
+    "company": "Company",
+    "search": "Search anything…",
+    "openMenu": "Open menu",
+    "navigation": "Navigation",
+    "navigationDescription": "Browse the sections of the app",
+    "collapseSidebar": "Collapse sidebar",
+    "expandSidebar": "Expand sidebar",
+    "switchLanguage": "Switch language",
+    "languageName": {
+      "ar": "العربية",
+      "en": "English"
+    },
+    "toggleTheme": "Toggle light or dark theme",
+    "userMenu": "Account menu",
+    "logout": "Sign out",
+    "help": {
+      "action": "Help center"
+    }
+  },
+  "home": {
+    "title": "Home",
+    "description": "Your workspace overview will appear here."
+  },
+  "dataTable": {
+    "columns": "Columns",
+    "toggleColumns": "Show columns",
+    "clearAll": "Clear filters",
+    "clearFilter": "Clear {filter} filter",
+    "searchOptions": "Search…",
+    "noOptions": "No results",
+    "selectAll": "Select all rows",
+    "selectRow": "Select row",
+    "sortBy": "Sort by this column",
+    "range": "{from}–{to} of {total}",
+    "rowsPerPage": "Rows per page",
+    "previousPage": "Previous page",
+    "nextPage": "Next page",
+    "goToPage": "Page {page}",
+    "pageOf": "{page} / {pages}"
+  },
+  "feedback": {
+    "error": {
+      "title": "Couldn't load this",
+      "description": "Something went wrong while loading. Please try again.",
+      "retry": "Try again"
+    },
+    "noPermission": {
+      "title": "No permission",
+      "description": "You don't have access to this. Ask an administrator if you need it."
+    },
+    "confirm": {
+      "cancel": "Cancel"
+    }
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "suspended": "Suspended",
+    "left": "Left",
+    "project_planning": "Planning",
+    "project_selling": "Selling",
+    "project_completed": "Completed",
+    "unit_available": "Available",
+    "unit_reserved": "Reserved",
+    "unit_sold": "Sold",
+    "export_pending": "Pending",
+    "export_approved": "Approved",
+    "export_rejected": "Rejected",
+    "booking_scheduled": "Scheduled",
+    "booking_completed": "Completed",
+    "booking_cancelled": "Cancelled",
+    "booking_no_show": "No-show",
+    "enrollment_enrolled": "Enrolled",
+    "enrollment_completed": "Completed",
+    "enrollment_dropped": "Dropped",
+    "vehicle_available": "Available",
+    "vehicle_reserved": "Reserved",
+    "vehicle_sold": "Sold",
+    "engagement_proposed": "Proposed",
+    "engagement_active": "Active",
+    "engagement_paused": "Paused",
+    "engagement_ended": "Ended"
+  },
+  "tree": {
+    "expand": "Expand",
+    "collapse": "Collapse"
+  },
+  "form": {
+    "select": "Select…",
+    "search": "Search…",
+    "noResults": "No results",
+    "clear": "Clear selection",
+    "pickDate": "Pick a date",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password"
+  },
+  "validation": {
+    "required": "This field is required.",
+    "email": "Enter a valid email address.",
+    "maxLength": "Too long.",
+    "min": "Value is too low.",
+    "max": "Value is too high.",
+    "passwordMismatch": "Passwords don't match.",
+    "number": "Enter a number.",
+    "phone": "Use digits only, with an optional + at the start (6 to 20 digits).",
+    "roleKey": "Start with a letter, then use lowercase letters, digits or underscores.",
+    "passwordTooShort": "Use at least 8 characters.",
+    "key": "Use lowercase letters, numbers and underscores, starting with a letter.",
+    "color": "Use a hex colour like #3B82F6.",
+    "wonAndLost": "A stage can't be both won and lost.",
+    "time": "Use a time like 08:30.",
+    "sameTime": "The end time must differ from the start time.",
+    "endBeforeStart": "The end date can't be before the start date."
+  },
+  "audit": {
+    "diff": {
+      "hidden": "[hidden]",
+      "empty": "empty",
+      "yes": "Yes",
+      "no": "No"
+    }
+  },
+  "auth": {
+    "brand": {
+      "name": "Smart CRM",
+      "badge": "Built for real-estate companies",
+      "headline": "Your clients, team and deals in one place",
+      "subheadline": "Branches, departments, teams and people, organised and secure, with a full record of who did what and when.",
+      "footer": "© Smart CRM · All rights reserved",
+      "highlights": {
+        "permissions": {
+          "title": "Precise permissions",
+          "description": "Everyone sees only their role"
+        },
+        "activity": {
+          "title": "Full activity log",
+          "description": "Every change is recorded"
+        },
+        "bilingual": {
+          "title": "Arabic and English",
+          "description": "Complete RTL interface"
+        },
+        "structure": {
+          "title": "Org structure",
+          "description": "Branches, departments and teams"
+        }
+      }
+    },
+    "fields": {
+      "email": "Email",
+      "password": "Password",
+      "passwordConfirmation": "Confirm password",
+      "companyName": "Company name",
+      "industry": "Industry",
+      "industryPlaceholder": "Choose your industry",
+      "ownerName": "Your name",
+      "phone": "Phone",
+      "language": "Language"
+    },
+    "industries": {
+      "real_estate": "Real estate",
+      "education": "Education",
+      "clinic": "Clinic",
+      "automotive": "Automotive",
+      "agency": "Agency",
+      "other": "Other"
+    },
+    "languages": {
+      "ar": "العربية",
+      "en": "English"
+    },
+    "login": {
+      "title": "Welcome back",
+      "description": "Sign in to your company workspace.",
+      "submit": "Sign in",
+      "demo": "Try the demo account",
+      "or": "or",
+      "noAccount": "New here?",
+      "register": "Register your company"
+    },
+    "register": {
+      "title": "Register your company",
+      "description": "Create your workspace in a minute.",
+      "submit": "Create account",
+      "haveAccount": "Already registered?",
+      "login": "Sign in"
+    }
+  },
+  "branches": {
+    "title": "Branches",
+    "description": "The offices and locations your company works from.",
+    "searchPlaceholder": "Search branches…",
+    "filters": {
+      "status": "Status"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "columns": {
+      "name": "Branch",
+      "city": "City",
+      "phone": "Phone",
+      "manager": "Manager",
+      "employees": "Employees",
+      "status": "Status"
+    },
+    "actions": {
+      "create": "New branch",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "form": {
+      "createTitle": "New branch",
+      "editTitle": "Edit branch",
+      "description": "Branch details and who manages it."
+    },
+    "fields": {
+      "nameAr": "Name (Arabic)",
+      "nameEn": "Name (English)",
+      "code": "Code",
+      "city": "City",
+      "phone": "Phone",
+      "manager": "Manager",
+      "address": "Address",
+      "isActive": "Active"
+    },
+    "delete": {
+      "title": "Delete {name}?",
+      "description": "This permanently removes the branch. It can't be undone.",
+      "confirm": "Delete branch"
+    },
+    "empty": {
+      "title": "No branches yet",
+      "description": "Create your first branch to start organising your company.",
+      "filteredTitle": "No matching branches",
+      "filteredDescription": "Try a different search or clear the filters."
+    },
+    "toast": {
+      "created": "Branch created",
+      "updated": "Branch updated",
+      "deleted": "Branch deleted"
+    }
+  },
+  "departments": {
+    "title": "Departments",
+    "description": "How your company is divided, and who runs each part.",
+    "searchPlaceholder": "Search departments…",
+    "filters": {
+      "branch": "Branch"
+    },
+    "views": {
+      "tree": "Tree",
+      "list": "List"
+    },
+    "columns": {
+      "name": "Department",
+      "branch": "Branch",
+      "manager": "Manager",
+      "employees": "Employees",
+      "status": "Status"
+    },
+    "actions": {
+      "create": "New department",
+      "menu": "Actions",
+      "edit": "Edit",
+      "addChild": "Add sub-department",
+      "move": "Move",
+      "delete": "Delete"
+    },
+    "form": {
+      "createTitle": "New department",
+      "editTitle": "Edit department",
+      "description": "Where it sits, which branch it belongs to and who manages it."
+    },
+    "fields": {
+      "nameAr": "Name (Arabic)",
+      "nameEn": "Name (English)",
+      "code": "Code",
+      "parent": "Parent department",
+      "noParent": "None (top level)",
+      "branch": "Branch",
+      "noBranch": "No branch",
+      "manager": "Manager",
+      "isActive": "Active"
+    },
+    "move": {
+      "title": "Move {name}",
+      "description": "Choose where this department should sit. Its sub-departments move with it.",
+      "newParent": "New parent",
+      "root": "None (top level)",
+      "confirm": "Move"
+    },
+    "delete": {
+      "title": "Delete {name}?",
+      "description": "This permanently removes the department. It can't be undone.",
+      "confirm": "Delete department"
+    },
+    "empty": {
+      "title": "No departments yet",
+      "description": "Create your first department to structure your company.",
+      "filteredTitle": "No matching departments",
+      "filteredDescription": "Try a different search or clear the filters."
+    },
+    "toast": {
+      "created": "Department created",
+      "updated": "Department updated",
+      "moved": "Department moved",
+      "deleted": "Department deleted"
+    }
+  },
+  "teams": {
+    "title": "Teams",
+    "description": "The groups of people working together inside each department.",
+    "searchPlaceholder": "Search teams…",
+    "filters": {
+      "department": "Department"
+    },
+    "columns": {
+      "name": "Team",
+      "department": "Department",
+      "leader": "Leader",
+      "members": "Members",
+      "status": "Status"
+    },
+    "actions": {
+      "create": "New team",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "form": {
+      "createTitle": "New team",
+      "editTitle": "Edit team",
+      "description": "Which department the team belongs to and who leads it."
+    },
+    "fields": {
+      "nameAr": "Name (Arabic)",
+      "nameEn": "Name (English)",
+      "department": "Department",
+      "departmentPlaceholder": "Choose a department",
+      "leader": "Team leader",
+      "isActive": "Active"
+    },
+    "delete": {
+      "title": "Delete {name}?",
+      "description": "This permanently removes the team. It can't be undone.",
+      "confirm": "Delete team"
+    },
+    "empty": {
+      "title": "No teams yet",
+      "description": "Create a team to group the people in a department.",
+      "filteredTitle": "No matching teams",
+      "filteredDescription": "Try a different search or clear the filters."
+    },
+    "toast": {
+      "created": "Team created",
+      "updated": "Team updated",
+      "deleted": "Team deleted"
+    }
+  },
+  "employees": {
+    "title": "Employees",
+    "description": "Manage your workforce, departments and reporting lines.",
+    "searchPlaceholder": "Search by name, email or code…",
+    "comingSoon": "Coming soon",
+    "never": "Never",
+    "locales": {
+      "ar": "Arabic",
+      "en": "English"
+    },
+    "kpis": {
+      "total": "Total employees",
+      "active": "Active now",
+      "activeShare": "{percent}% of the team",
+      "suspended": "Suspended",
+      "needsReview": "Needs review",
+      "teams": "Teams",
+      "inBranches": "{count, plural, one {in # branch} other {in # branches}}"
+    },
+    "filters": {
+      "status": "Status",
+      "branch": "Branch",
+      "department": "Department",
+      "team": "Team",
+      "manager": "Direct manager",
+      "includeSubDepartments": "Include sub-departments"
+    },
+    "columns": {
+      "employee": "Employee",
+      "code": "Code",
+      "department": "Department",
+      "team": "Team",
+      "branch": "Branch",
+      "status": "Status",
+      "lastLogin": "Last login"
+    },
+    "actions": {
+      "create": "Add employee",
+      "import": "Import",
+      "export": "Export",
+      "menu": "Actions",
+      "view": "View profile",
+      "edit": "Edit",
+      "suspend": "Suspend",
+      "activate": "Activate",
+      "offboard": "Offboard"
+    },
+    "form": {
+      "createTitle": "Add employee",
+      "editTitle": "Edit employee",
+      "description": "Account details, where they sit in the company and who they report to."
+    },
+    "fields": {
+      "name": "Full name",
+      "email": "Email",
+      "password": "Password",
+      "passwordKeep": "Leave blank to keep the current password.",
+      "code": "Employee code",
+      "phone": "Phone",
+      "jobTitle": "Job title",
+      "team": "Team",
+      "teamHint": "Picking a team fills the department and branch.",
+      "department": "Department",
+      "branch": "Branch",
+      "manager": "Direct manager",
+      "hiredAt": "Hire date",
+      "commissionRate": "Commission rate (%)",
+      "language": "Language",
+      "none": "None"
+    },
+    "status": {
+      "suspend": {
+        "title": "Suspend {name}?",
+        "description": "They will be signed out and unable to log in until you activate them again.",
+        "confirm": "Suspend"
+      },
+      "activate": {
+        "title": "Activate {name}?",
+        "description": "They will be able to sign in again.",
+        "confirm": "Activate"
+      }
+    },
+    "offboard": {
+      "title": "Offboard {name}",
+      "description": "Their sign-in will be stopped and their responsibilities moved to someone else.",
+      "summary": {
+        "title": "This will be transferred:",
+        "reports": "{count, plural, one {# direct report} other {# direct reports}}",
+        "leadsTeam": "Leads {team}",
+        "leadsAndDeals": "Leads and open deals",
+        "soon": "Soon"
+      },
+      "transferTo": "Transfer responsibilities to",
+      "transferPlaceholder": "Choose a colleague",
+      "reason": "Reason",
+      "reasonPlaceholder": "e.g. resigned, last working day 31 October",
+      "loggedNote": "This action is recorded in the activity log.",
+      "confirm": "Confirm offboarding"
+    },
+    "profile": {
+      "tabs": {
+        "overview": "Overview",
+        "subordinates": "Subordinates",
+        "deals": "Leads & deals",
+        "roles": "Roles & permissions",
+        "activity": "Activity log"
+      },
+      "basic": {
+        "title": "Basic information",
+        "code": "Employee code",
+        "email": "Email",
+        "phone": "Phone",
+        "hiredAt": "Hire date",
+        "commission": "Commission rate",
+        "language": "Language",
+        "lastLogin": "Last login",
+        "never": "Never signed in"
+      },
+      "activity": {
+        "recentTitle": "Recent activity",
+        "viewAll": "View all",
+        "empty": "No activity yet",
+        "someone": "Someone",
+        "changedField": "{user} changed {field}",
+        "actions": {
+          "created": "{user} added the employee",
+          "updated": "{user} updated the details",
+          "login": "{user} signed in",
+          "suspended": "{user} suspended the employee",
+          "activated": "{user} activated the employee",
+          "offboarded": "{user} offboarded the employee",
+          "deleted": "{user} deleted the record",
+          "other": "{user}: {action}"
+        }
+      },
+      "fields": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "job_title": "Job title",
+        "employee_code": "Employee code",
+        "status": "Status",
+        "branch_id": "Branch",
+        "department_id": "Department",
+        "team_id": "Team",
+        "manager_id": "Direct manager",
+        "hired_at": "Hire date",
+        "commission_rate": "Commission rate",
+        "locale": "Language",
+        "password": "Password"
+      },
+      "reportingLine": {
+        "title": "Reporting line",
+        "current": "This employee",
+        "none": "Not part of the reporting tree.",
+        "managerOnly": "Reports to {name}"
+      },
+      "target": {
+        "title": "Monthly target",
+        "unavailable": "Targets arrive with the deals module."
+      },
+      "subordinates": {
+        "emptyTitle": "No subordinates",
+        "emptyDescription": "Nobody reports to this person.",
+        "count": "{count, plural, one {# person} other {# people}} below this employee"
+      },
+      "comingSoon": {
+        "deals": {
+          "title": "Leads & deals",
+          "description": "This employee's leads and deals will appear here once the sales module launches."
+        },
+        "roles": {
+          "title": "Roles & permissions",
+          "description": "Role assignment for this employee is coming soon."
+        }
+      }
+    },
+    "empty": {
+      "title": "No employees yet",
+      "description": "Add your first employee to get started.",
+      "filteredTitle": "No matching employees",
+      "filteredDescription": "Try a different search or clear the filters."
+    },
+    "toast": {
+      "created": "Employee added",
+      "updated": "Employee updated",
+      "suspended": "Employee suspended",
+      "activated": "Employee activated",
+      "offboarded": "Employee offboarded"
+    }
+  },
+  "leads": {
+    "title": "Leads",
+    "description": "Everyone who has shown interest, who owns them, and where they are in the pipeline.",
+    "searchPlaceholder": "Search by name, phone or email…",
+    "unassigned": "Unassigned",
+    "noActivity": "No activity yet",
+    "filters": {
+      "stage": "Stage",
+      "source": "Source",
+      "owner": "Owner",
+      "team": "Team",
+      "assignment": "Assignment",
+      "unassigned": "Unassigned"
+    },
+    "columns": {
+      "lead": "Lead",
+      "stage": "Stage",
+      "source": "Source",
+      "owner": "Owner",
+      "budget": "Budget",
+      "lastActivity": "Last activity"
+    },
+    "actions": {
+      "create": "New lead",
+      "menu": "Actions",
+      "view": "View lead",
+      "edit": "Edit",
+      "changeStage": "Change stage",
+      "assign": "Assign",
+      "delete": "Delete",
+      "import": "Import",
+      "export": "Export"
+    },
+    "selection": {
+      "count": "{count, plural, one {# lead selected} other {# leads selected}}",
+      "assign": "Assign to…",
+      "clear": "Clear selection"
+    },
+    "form": {
+      "createTitle": "New lead",
+      "editTitle": "Edit lead",
+      "description": "Contact details, where the lead came from and who looks after it."
+    },
+    "fields": {
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "budget": "Budget",
+      "source": "Source",
+      "team": "Team",
+      "owner": "Owner",
+      "notes": "Notes",
+      "none": "None"
+    },
+    "stage": {
+      "title": "Move {name}",
+      "description": "Choose the stage this lead is in now.",
+      "current": "Currently in {stage}.",
+      "target": "New stage",
+      "choose": "Choose a stage",
+      "lostReason": "Why was it lost?",
+      "lostReasonHint": "Optional, but it helps when you review lost leads later.",
+      "confirm": "Move lead"
+    },
+    "assign": {
+      "titleOne": "Assign {name}",
+      "titleMany": "{count, plural, one {Assign # lead} other {Assign # leads}}",
+      "description": "The new owner becomes responsible for follow-up.",
+      "owner": "New owner",
+      "confirm": "Assign"
+    },
+    "delete": {
+      "title": "Delete {name}?",
+      "description": "This permanently removes the lead and its activity. It can't be undone.",
+      "confirm": "Delete lead"
+    },
+    "info": {
+      "title": "Lead details",
+      "phone": "Phone",
+      "email": "Email",
+      "budget": "Budget",
+      "source": "Source",
+      "owner": "Owner",
+      "team": "Team",
+      "created": "Created",
+      "lostReason": "Lost because",
+      "notes": "Notes",
+      "unassigned": "Unassigned"
+    },
+    "activity": {
+      "title": "Activity",
+      "typeLabel": "Type of activity",
+      "placeholder": "What happened? A call, a meeting, a note…",
+      "log": "Log activity",
+      "empty": "Nothing logged yet",
+      "types": {
+        "note": "Note",
+        "call": "Call",
+        "meeting": "Meeting",
+        "whatsapp": "WhatsApp",
+        "email": "Email",
+        "assigned": "Assigned",
+        "stage_changed": "Stage changed"
+      }
+    },
+    "empty": {
+      "title": "No leads yet",
+      "description": "Add your first lead to start building a pipeline.",
+      "filteredTitle": "No matching leads",
+      "filteredDescription": "Try a different search or clear the filters."
+    },
+    "toast": {
+      "created": "Lead created",
+      "updated": "Lead updated",
+      "deleted": "Lead deleted",
+      "stageChanged": "Lead moved",
+      "assigned": "Lead assigned",
+      "activityLogged": "Activity logged"
+    },
+    "export": {
+      "pending": "Export sent for approval. You can download it once a manager approves it.",
+      "failed": "Couldn't export leads."
+    },
+    "import": {
+      "title": "Import leads",
+      "description": "Upload a CSV file. Check it first to see what would happen, then import the valid rows.",
+      "template": "Download template",
+      "choose": "Choose CSV file",
+      "file": "CSV file",
+      "noFile": "No file chosen",
+      "check": "Check file",
+      "import": "Import {count, plural, one {# lead} other {# leads}}",
+      "done": "{count, plural, one {# lead imported} other {# leads imported}}",
+      "failed": "Couldn't read the file.",
+      "report": {
+        "total": "Rows",
+        "valid": "Valid",
+        "duplicates": "Duplicates",
+        "failed": "Failed",
+        "row": "Row {row}:",
+        "duplicatesHint": "Rows with a phone number that already exists: {rows}."
+      }
+    },
+    "messages": {
+      "title": "Messages",
+      "empty": "No messages yet.",
+      "placeholder": "Write a message…",
+      "send": "Send",
+      "channel": "Send through",
+      "failed": "The message could not be sent.",
+      "noChannel": "No active WhatsApp or SMS channel is connected.",
+      "loadingChannels": "Loading channels…"
+    }
+  },
+  "deals": {
+    "title": "Deals",
+    "description": "Opportunities moving through your sales pipeline, and what they are worth.",
+    "searchPlaceholder": "Search deals…",
+    "unassigned": "Unassigned",
+    "views": {
+      "board": "Pipeline",
+      "list": "List"
+    },
+    "board": {
+      "count": "{count, plural, one {# deal} other {# deals}}",
+      "empty": "No deals here",
+      "limit": "Showing the first {limit} of {total} deals. Narrow the filters to see the rest."
+    },
+    "filters": {
+      "stage": "Stage",
+      "status": "Status",
+      "owner": "Owner",
+      "statuses": {
+        "open": "Open",
+        "won": "Won",
+        "lost": "Lost"
+      }
+    },
+    "columns": {
+      "deal": "Deal",
+      "stage": "Stage",
+      "value": "Value",
+      "owner": "Owner",
+      "expectedClose": "Expected close"
+    },
+    "actions": {
+      "create": "New deal",
+      "menu": "Actions",
+      "edit": "Edit",
+      "changeStage": "Change stage",
+      "assign": "Assign",
+      "delete": "Delete"
+    },
+    "form": {
+      "createTitle": "New deal",
+      "editTitle": "Edit deal",
+      "description": "What is being sold, for how much, and who is responsible."
+    },
+    "fields": {
+      "title": "Title",
+      "value": "Value",
+      "expectedClose": "Expected close date",
+      "lead": "Lead",
+      "owner": "Owner",
+      "notes": "Notes"
+    },
+    "stage": {
+      "title": "Move {name}",
+      "description": "Choose the stage this deal is in now.",
+      "current": "Currently in {stage}.",
+      "target": "New stage",
+      "choose": "Choose a stage",
+      "lostReason": "Why was it lost?",
+      "lostReasonHint": "Optional, but it helps when you review lost deals later.",
+      "confirm": "Move deal"
+    },
+    "assign": {
+      "title": "Assign {name}",
+      "description": "The new owner becomes responsible for closing it.",
+      "owner": "New owner",
+      "confirm": "Assign"
+    },
+    "delete": {
+      "title": "Delete {name}?",
+      "description": "This permanently removes the deal. It can't be undone.",
+      "confirm": "Delete deal"
+    },
+    "empty": {
+      "title": "No deals yet",
+      "description": "Create your first deal to start tracking your pipeline.",
+      "filteredTitle": "No matching deals",
+      "filteredDescription": "Try a different search or clear the filters."
+    },
+    "toast": {
+      "created": "Deal created",
+      "updated": "Deal updated",
+      "deleted": "Deal deleted",
+      "stageChanged": "Deal moved",
+      "assigned": "Deal assigned"
+    },
+    "info": {
+      "title": "Deal details",
+      "value": "Value",
+      "commission": "Commission",
+      "lead": "Lead",
+      "owner": "Owner",
+      "expectedClose": "Expected close",
+      "closedAt": "Closed on",
+      "created": "Created",
+      "lostReason": "Lost because",
+      "notes": "Notes",
+      "unassigned": "Unassigned"
+    }
+  },
+  "roles": {
+    "title": "Roles & permissions",
+    "description": "Decide who can see and do what across your company.",
+    "columns": {
+      "name": "Role",
+      "description": "Description",
+      "employees": "People",
+      "type": "Type"
+    },
+    "type": {
+      "system": "Built-in",
+      "custom": "Custom"
+    },
+    "actions": {
+      "create": "New role",
+      "edit": "Edit",
+      "delete": "Delete",
+      "permissions": "Manage permissions"
+    },
+    "form": {
+      "createTitle": "New role",
+      "editTitle": "Edit role",
+      "description": "Name the role, then choose what it can do."
+    },
+    "fields": {
+      "nameAr": "Name (Arabic)",
+      "nameEn": "Name (English)",
+      "key": "Key",
+      "keyHint": "A short code such as support_lead. Leave empty to generate one.",
+      "description": "Description"
+    },
+    "delete": {
+      "title": "Delete {name}?",
+      "description": "This permanently removes the role. It can't be undone.",
+      "confirm": "Delete role"
+    },
+    "empty": {
+      "title": "No roles yet",
+      "description": "Create a role to start giving people access."
+    },
+    "editor": {
+      "back": "All roles",
+      "ownerNote": "The owner role always has every permission, whatever is set here.",
+      "readOnly": "You can look at this role but not change it.",
+      "tabs": {
+        "permissions": "Permissions",
+        "scopes": "Data access",
+        "fields": "Field access"
+      },
+      "unsaved": "You have unsaved changes",
+      "saved": "All changes saved",
+      "discard": "Discard",
+      "save": "Save changes"
+    },
+    "assign": {
+      "intro": "Tick every role this person should have. Their access is the sum of all of them.",
+      "readOnly": "These are the roles this person has.",
+      "manage": "Manage roles"
+    },
+    "scopes": {
+      "intro": "Choose how much of each module's data this role can reach."
+    },
+    "fieldAccess": {
+      "intro": "Hide or lock individual fields for this role, such as phone numbers or budgets."
+    },
+    "toast": {
+      "created": "Role created",
+      "updated": "Role updated",
+      "deleted": "Role deleted",
+      "assigned": "Roles updated",
+      "permissionsSaved": "Permissions saved",
+      "scopesSaved": "Data access saved",
+      "fieldsSaved": "Field access saved"
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "withUnread": "Notifications, {count} unread",
+    "markAllRead": "Mark all as read",
+    "loading": "Loading…",
+    "empty": "You're all caught up"
+  },
+  "orgChart": {
+    "title": "Org chart",
+    "description": "Reporting lines for {count, plural, one {# active employee} other {# active employees}}",
+    "modes": {
+      "manager": "By manager",
+      "department": "By department"
+    },
+    "export": "Export PDF",
+    "search": "Search the chart…",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "fit": "Fit to screen",
+    "expand": "Show reports",
+    "collapse": "Hide reports",
+    "count": "{count, plural, =0 {No people} one {# person} other {# people}}",
+    "empty": {
+      "title": "Nothing to show yet",
+      "description": "Add employees and assign managers to build the chart."
+    }
+  },
+  "auditLog": {
+    "title": "Activity log",
+    "description": "Who changed what, and when.",
+    "filters": {
+      "action": "Action",
+      "module": "Module",
+      "user": "User",
+      "from": "From date",
+      "to": "To date"
+    },
+    "columns": {
+      "when": "When",
+      "user": "User",
+      "action": "Action",
+      "module": "Module",
+      "record": "Record"
+    },
+    "actions": {
+      "view": "View details",
+      "created": "Created",
+      "updated": "Updated",
+      "deleted": "Deleted",
+      "login": "Signed in",
+      "logout": "Signed out",
+      "suspended": "Suspended",
+      "activated": "Activated",
+      "offboarded": "Offboarded"
+    },
+    "modules": {
+      "employees": "Employees",
+      "branches": "Branches",
+      "departments": "Departments",
+      "teams": "Teams",
+      "leads": "Leads",
+      "deals": "Deals",
+      "deal_settings": "Deal settings",
+      "real_estate": "Real estate"
+    },
+    "drawer": {
+      "title": "Entry details",
+      "user": "User",
+      "when": "When",
+      "record": "Record",
+      "ip": "IP address",
+      "request": "Request",
+      "agent": "Browser",
+      "changes": "Changes",
+      "noChanges": "This entry did not change any fields."
+    },
+    "empty": {
+      "title": "No activity yet",
+      "description": "Changes made in your workspace will be recorded here.",
+      "filteredTitle": "No matching entries",
+      "filteredDescription": "Try different filters or clear them."
+    }
+  },
+  "errors": {
+    "network": "Can't reach the server. Check your connection and try again.",
+    "forbidden": "You don't have permission to do this.",
+    "notFound": "We couldn't find what you were looking for.",
+    "unknown": "Something went wrong. Please try again."
+  },
+  "tasks": {
+    "title": "Tasks",
+    "description": "Follow-ups and to-dos for you and your team, with due dates and priorities.",
+    "searchPlaceholder": "Search tasks…",
+    "overdue": "Overdue",
+    "columns": {
+      "task": "Task",
+      "priority": "Priority",
+      "due": "Due",
+      "owner": "Owner"
+    },
+    "filters": {
+      "status": "Status",
+      "priority": "Priority",
+      "owner": "Owner",
+      "statuses": {
+        "open": "Open",
+        "overdue": "Overdue",
+        "done": "Done"
+      },
+      "priorities": {
+        "high": "High",
+        "normal": "Normal",
+        "low": "Low"
+      }
+    },
+    "actions": {
+      "create": "New task",
+      "edit": "Edit task",
+      "delete": "Delete task",
+      "complete": "Mark as done",
+      "reopen": "Reopen",
+      "assign": "Assign task"
+    },
+    "assign": {
+      "title": "Assign {name}",
+      "current": "Currently assigned to {name}. The new owner is notified.",
+      "unassigned": "Nobody owns this task yet. The new owner is notified.",
+      "owner": "New owner",
+      "confirm": "Assign"
+    },
+    "form": {
+      "createTitle": "New task",
+      "editTitle": "Edit task",
+      "description": "What needs to happen, by when, and who owns it."
+    },
+    "fields": {
+      "title": "Title",
+      "priority": "Priority",
+      "due": "Due date",
+      "owner": "Owner",
+      "description": "Details"
+    },
+    "delete": {
+      "title": "Delete {name}?",
+      "description": "This permanently removes the task. It can't be undone.",
+      "confirm": "Delete task"
+    },
+    "empty": {
+      "title": "No tasks yet",
+      "description": "Add a task to keep track of your next follow-up.",
+      "filteredTitle": "No matching tasks",
+      "filteredDescription": "Try a different search or clear the filters."
+    },
+    "toast": {
+      "created": "Task created",
+      "updated": "Task updated",
+      "deleted": "Task deleted",
+      "completed": "Task marked as done",
+      "reopened": "Task reopened",
+      "assigned": "Task assigned"
+    },
+    "related": {
+      "title": "Tasks",
+      "empty": "No tasks linked yet."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "description": "How your leads and deals are performing.",
+    "periods": {
+      "7": "7 days",
+      "30": "30 days",
+      "90": "90 days",
+      "all": "All time"
+    },
+    "kpi": {
+      "leads": "Leads",
+      "leadsOpen": "{count} open",
+      "conversion": "Conversion rate",
+      "leadsWon": "{count} won",
+      "deals": "Deals",
+      "dealsOpen": "{count} open",
+      "dealsWon": "Deals won",
+      "dealsLost": "{count} lost",
+      "pipelineValue": "Open pipeline value",
+      "wonValue": "Won value",
+      "commission": "Commission"
+    },
+    "byStage": "Leads by stage",
+    "bySource": "Leads by source",
+    "noSource": "No source",
+    "empty": "No data for this period",
+    "agents": {
+      "title": "Team performance",
+      "description": "Leads and deals per owner in this period, highest won value first.",
+      "empty": "No leads or deals owned by anyone in this period.",
+      "unknown": "Employee #{id}",
+      "columns": {
+        "employee": "Employee",
+        "leads": "Leads",
+        "leadsWon": "Leads won",
+        "conversion": "Conversion",
+        "deals": "Deals",
+        "dealsWon": "Deals won",
+        "wonValue": "Won value",
+        "commission": "Commission"
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Your real estate developments and how many units are still available.",
+    "searchPlaceholder": "Search projects…",
+    "availableOf": "{available} of {total} available",
+    "statuses": {
+      "planning": "Planning",
+      "selling": "Selling",
+      "completed": "Completed"
+    },
+    "columns": {
+      "project": "Project",
+      "location": "Location",
+      "status": "Status",
+      "units": "Units",
+      "delivery": "Delivery"
+    },
+    "actions": {
+      "create": "New project",
+      "edit": "Edit project",
+      "delete": "Delete project"
+    },
+    "form": {
+      "createTitle": "New project",
+      "editTitle": "Edit project",
+      "description": "The development, where it is, and what stage it is in."
+    },
+    "fields": {
+      "nameAr": "Name (Arabic)",
+      "nameEn": "Name (English)",
+      "code": "Code",
+      "status": "Status",
+      "city": "City",
+      "district": "District",
+      "address": "Address",
+      "delivery": "Delivery date",
+      "description": "Description"
+    },
+    "delete": {
+      "title": "Delete {name}?",
+      "description": "This permanently removes the project. A project with units can't be deleted.",
+      "confirm": "Delete project"
+    },
+    "empty": {
+      "title": "No projects yet",
+      "description": "Create your first project, then add its units.",
+      "filteredTitle": "No matching projects",
+      "filteredDescription": "Try a different search or clear the filters."
+    },
+    "toast": {
+      "created": "Project created",
+      "updated": "Project updated",
+      "deleted": "Project deleted"
+    }
+  },
+  "units": {
+    "title": "Units",
+    "description": "Every unit for sale, its price and whether it is free, reserved or sold.",
+    "searchPlaceholder": "Search units…",
+    "sizeValue": "{area} m² · {bedrooms} BR",
+    "types": {
+      "apartment": "Apartment",
+      "villa": "Villa",
+      "duplex": "Duplex",
+      "townhouse": "Townhouse",
+      "shop": "Shop",
+      "office": "Office",
+      "land": "Land"
+    },
+    "statuses": {
+      "available": "Available",
+      "reserved": "Reserved",
+      "sold": "Sold"
+    },
+    "columns": {
+      "unit": "Unit",
+      "type": "Type",
+      "size": "Size",
+      "price": "Price",
+      "status": "Status"
+    },
+    "actions": {
+      "create": "New unit",
+      "menu": "Actions",
+      "reserve": "Reserve for a lead",
+      "release": "Release reservation",
+      "sell": "Mark as sold",
+      "edit": "Edit",
+      "delete": "Delete",
+      "interests": "Interested leads",
+      "media": "Photos & files"
+    },
+    "interests": {
+      "title": "Leads interested in {unit}",
+      "description": "A shortlist of leads who asked about this unit, before anyone reserves it.",
+      "empty": "No leads have shown interest yet.",
+      "remove": "Remove interest",
+      "addTitle": "Add an interested lead",
+      "add": "Add",
+      "fields": {
+        "lead": "Lead",
+        "note": "Note"
+      },
+      "toast": {
+        "added": "Lead added to the shortlist",
+        "removed": "Lead removed from the shortlist"
+      }
+    },
+    "media": {
+      "title": "Photos & files of {unit}",
+      "description": "{count} of {max} files.",
+      "empty": "No photos or files yet.",
+      "kind": "Kind",
+      "kinds": {
+        "photo": "Photo",
+        "floor_plan": "Floor plan",
+        "brochure": "Brochure"
+      },
+      "hint": {
+        "photo": "JPG, PNG or WebP, up to 10 MB.",
+        "floor_plan": "JPG, PNG or WebP, up to 10 MB.",
+        "brochure": "PDF, up to 10 MB."
+      },
+      "wrongType": {
+        "photo": "A photo must be a JPG, PNG or WebP image.",
+        "floor_plan": "A floor plan must be a JPG, PNG or WebP image.",
+        "brochure": "A brochure must be a PDF."
+      },
+      "tooLarge": "The file is larger than 10 MB.",
+      "full": "This unit already has the maximum number of files. Delete one to add another.",
+      "upload": "Upload file",
+      "uploadFailed": "The file couldn't be uploaded. Please try again.",
+      "delete": "Delete file",
+      "toast": {
+        "uploaded": "File uploaded",
+        "deleted": "File deleted"
+      }
+    },
+    "form": {
+      "createTitle": "New unit",
+      "editTitle": "Edit unit",
+      "description": "Which project it belongs to, what it is, and what it costs."
+    },
+    "fields": {
+      "project": "Project",
+      "unitNumber": "Unit number",
+      "type": "Type",
+      "status": "Status",
+      "area": "Area (m²)",
+      "floor": "Floor",
+      "price": "Price",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "notes": "Notes"
+    },
+    "reserve": {
+      "title": "Reserve {name}",
+      "description": "Hold this unit for a lead. It goes back on sale when the hold ends.",
+      "lead": "Lead",
+      "holdHours": "Hold for (hours)",
+      "deposit": "Deposit",
+      "confirm": "Reserve unit"
+    },
+    "release": {
+      "title": "Release {name}?",
+      "description": "The unit becomes available again.",
+      "confirm": "Release"
+    },
+    "sell": {
+      "title": "Mark {name} as sold?",
+      "description": "The unit is no longer available to reserve.",
+      "confirm": "Mark as sold"
+    },
+    "delete": {
+      "title": "Delete {name}?",
+      "description": "This permanently removes the unit. It can't be undone.",
+      "confirm": "Delete unit"
+    },
+    "empty": {
+      "title": "No units yet",
+      "description": "Add units to a project to start selling.",
+      "filteredTitle": "No matching units",
+      "filteredDescription": "Try a different search or clear the filters."
+    },
+    "toast": {
+      "created": "Unit created",
+      "updated": "Unit updated",
+      "deleted": "Unit deleted",
+      "reserved": "Unit reserved",
+      "released": "Reservation released",
+      "sold": "Unit marked as sold"
+    }
+  },
+  "pipelineSettings": {
+    "title": "Sales pipeline",
+    "description": "Lead and deal stages, lead sources and how new leads are shared out.",
+    "empty": "Nothing here yet.",
+    "edit": "Edit",
+    "flags": {
+      "won": "Won",
+      "lost": "Lost",
+      "inactive": "Inactive"
+    },
+    "kinds": {
+      "lead-stages": {
+        "tab": "Lead stages",
+        "title": "Lead stages",
+        "description": "The steps a lead moves through, in order.",
+        "create": "New lead stage",
+        "edit": "Edit lead stage"
+      },
+      "lead-sources": {
+        "tab": "Lead sources",
+        "title": "Lead sources",
+        "description": "Where your leads come from.",
+        "create": "New source",
+        "edit": "Edit source"
+      },
+      "deal-stages": {
+        "tab": "Deal stages",
+        "title": "Deal stages",
+        "description": "The steps a deal moves through, in order.",
+        "create": "New deal stage",
+        "edit": "Edit deal stage"
+      },
+      "rules": {
+        "tab": "Distribution",
+        "title": "Lead distribution",
+        "description": "Share new leads automatically between the members of a team.",
+        "create": "New rule",
+        "edit": "Edit rule"
+      }
+    },
+    "strategies": {
+      "round_robin": "Round robin (take turns)",
+      "workload": "By workload (fewest open leads)"
+    },
+    "rules": {
+      "description": "Pick a team and how its new leads are handed out."
+    },
+    "form": {
+      "description": "Names in both languages; the key is set once and can't change."
+    },
+    "fields": {
+      "nameAr": "Name (Arabic)",
+      "nameEn": "Name (English)",
+      "key": "Key",
+      "keyHint": "Lowercase letters, numbers and underscores. Leave empty to generate one.",
+      "position": "Position",
+      "color": "Colour",
+      "colorHint": "Hex colour such as #3B82F6.",
+      "isWon": "Counts as won",
+      "isLost": "Counts as lost",
+      "isActive": "Active",
+      "team": "Team",
+      "strategy": "How to share leads"
+    },
+    "delete": {
+      "title": "Delete {name}?",
+      "description": "This can't be undone. Anything still using it will block the delete.",
+      "confirm": "Delete"
+    },
+    "toast": {
+      "saved": "Saved",
+      "deleted": "Deleted"
+    }
+  },
+  "exportRequests": {
+    "title": "Export requests",
+    "description": "Lead exports that need a manager's approval before they can be downloaded.",
+    "downloadFailed": "Couldn't download the file.",
+    "statuses": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "columns": {
+      "requestedBy": "Requested by",
+      "requestedAt": "Requested",
+      "status": "Status",
+      "decidedBy": "Decision"
+    },
+    "actions": {
+      "download": "Download",
+      "approve": "Approve",
+      "reject": "Reject"
+    },
+    "decision": {
+      "note": "Note",
+      "approve": {
+        "title": "Approve {name}'s export?",
+        "description": "They will be able to download the lead list.",
+        "confirm": "Approve"
+      },
+      "reject": {
+        "title": "Reject {name}'s export?",
+        "description": "They will not be able to download it. You can add a reason.",
+        "confirm": "Reject"
+      }
+    },
+    "empty": {
+      "title": "No export requests",
+      "description": "Requests appear here when a lead export needs approval."
+    },
+    "toast": {
+      "approved": "Export approved",
+      "rejected": "Export rejected"
+    }
+  },
+  "channels": {
+    "title": "Channels",
+    "description": "Connect WhatsApp, SMS, Facebook lead ads and web forms so leads and messages arrive here.",
+    "active": "Active",
+    "inactive": "Inactive",
+    "canSend": "can send messages",
+    "webhookUrl": "Webhook URL",
+    "copy": "Copy URL",
+    "lastReceived": "Last received",
+    "neverReceived": "Nothing received yet",
+    "types": {
+      "whatsapp": "WhatsApp",
+      "sms": "SMS",
+      "facebook_lead_ads": "Facebook lead ads",
+      "web_form": "Web form"
+    },
+    "actions": {
+      "create": "New connection",
+      "edit": "Edit",
+      "rotate": "New webhook URL",
+      "delete": "Delete"
+    },
+    "form": {
+      "createTitle": "New channel connection",
+      "editTitle": "Edit channel connection",
+      "description": "After saving, paste the webhook URL into the provider's settings."
+    },
+    "fields": {
+      "type": "Channel",
+      "name": "Name",
+      "team": "Send new leads to team",
+      "noTeam": "No team",
+      "sourceKey": "Lead source key",
+      "sourceKeyHint": "Optional. Leave empty to use the channel's default source.",
+      "isActive": "Active"
+    },
+    "credentials": {
+      "title": "Credentials",
+      "hint": "Provided by the channel's provider. They are stored securely and never shown again.",
+      "keepHint": "Leave a box empty to keep the stored value.",
+      "isSet": "Already set",
+      "fields": {
+        "access_token": "Access token",
+        "phone_number_id": "Phone number ID",
+        "app_secret": "App secret",
+        "verify_token": "Verify token",
+        "graph_version": "Graph version (e.g. v21.0)",
+        "account_sid": "Account SID",
+        "auth_token": "Auth token",
+        "from": "Sender number (+...)",
+        "page_access_token": "Page access token",
+        "secret": "Shared secret"
+      }
+    },
+    "rotate": {
+      "title": "New webhook URL for {name}?",
+      "description": "The old URL stops working at once. Update it in the provider's settings.",
+      "confirm": "Create new URL",
+      "copyNew": "New URL created. Copy it into the provider's settings."
+    },
+    "delete": {
+      "title": "Delete {name}?",
+      "description": "Messages already received stay on their leads, but nothing new will arrive.",
+      "confirm": "Delete connection"
+    },
+    "empty": {
+      "title": "No channels connected",
+      "description": "Connect a channel to receive leads and message them from here."
+    },
+    "toast": {
+      "saved": "Saved",
+      "deleted": "Deleted",
+      "rotated": "Webhook URL replaced"
+    }
+  },
+  "securityPolicy": {
+    "title": "Security",
+    "description": "Control where and when your team can sign in, and what needs extra checks.",
+    "ownerNote": "These rules apply to every employee except the company owner.",
+    "ownerNoteSelf": "These rules apply to every employee except you: the company owner is never blocked, so a wrong setting can't lock you out.",
+    "sections": {
+      "network": {
+        "title": "Allowed networks",
+        "description": "Only sign-ins from these addresses are accepted."
+      },
+      "hours": {
+        "title": "Sign-in hours",
+        "description": "Outside these hours, sign-in is refused. Times use the company's time zone."
+      },
+      "access": {
+        "title": "Extra checks",
+        "description": "Additional steps for signing in and exporting data."
+      }
+    },
+    "fields": {
+      "ipWhitelist": "IP addresses and ranges",
+      "ipWhitelistHint": "One per line, e.g. 41.33.10.0/24. Leave empty to allow any network.",
+      "hoursEnabled": "Limit sign-in to set hours",
+      "from": "From",
+      "to": "To",
+      "overnightHint": "An end time before the start time runs past midnight (e.g. 22:00 to 06:00).",
+      "days": "Days",
+      "daysHint": "Leave all unticked to allow every day.",
+      "requireTwoFactor": "Require two-factor authentication",
+      "requireTwoFactorUnavailable": "Not available yet: this app can't sign in with a two-factor code, so turning it on would lock employees out. It can only be turned off here.",
+      "exportApproval": "Exports need approval",
+      "exportApprovalHint": "Lead exports wait in Export requests until someone approves them."
+    },
+    "days": {
+      "0": "Sunday",
+      "1": "Monday",
+      "2": "Tuesday",
+      "3": "Wednesday",
+      "4": "Thursday",
+      "5": "Friday",
+      "6": "Saturday"
+    },
+    "toast": {
+      "saved": "Security settings saved"
+    }
+  },
+  "clinic": {
+    "services": {
+      "title": "Services",
+      "description": "What your clinic offers, how long each visit takes and what it costs.",
+      "searchPlaceholder": "Search services…",
+      "active": "Active",
+      "inactive": "Inactive",
+      "minutes": "{count} min",
+      "columns": {
+        "service": "Service",
+        "duration": "Duration",
+        "price": "Price",
+        "status": "Status"
+      },
+      "fields": {
+        "nameAr": "Name (Arabic)",
+        "nameEn": "Name (English)",
+        "code": "Code",
+        "duration": "Duration (minutes)",
+        "price": "Price",
+        "isActive": "Available for booking"
+      },
+      "actions": {
+        "create": "New service",
+        "edit": "Edit service",
+        "delete": "Delete service"
+      },
+      "form": {
+        "createTitle": "New service",
+        "editTitle": "Edit service",
+        "description": "The duration sets how long each appointment for it lasts."
+      },
+      "delete": {
+        "title": "Delete {name}?",
+        "description": "This permanently removes the service. It can't be undone.",
+        "confirm": "Delete service"
+      },
+      "empty": {
+        "title": "No services yet",
+        "description": "Add the services patients can book.",
+        "filteredTitle": "No matching services",
+        "filteredDescription": "Try a different search or clear the filters."
+      },
+      "toast": {
+        "created": "Service created",
+        "updated": "Service updated",
+        "deleted": "Service deleted"
+      }
+    },
+    "appointments": {
+      "title": "Appointments",
+      "description": "Who is booked with which doctor, for what, and when.",
+      "statuses": {
+        "scheduled": "Scheduled",
+        "completed": "Completed",
+        "cancelled": "Cancelled",
+        "no_show": "No-show"
+      },
+      "columns": {
+        "when": "When",
+        "service": "Service",
+        "lead": "Patient",
+        "doctor": "Doctor",
+        "status": "Status"
+      },
+      "fields": {
+        "service": "Service",
+        "lead": "Patient (lead)",
+        "doctor": "Doctor",
+        "startsAt": "Starts at",
+        "startsAtHint": "Must be in the future. It ends after the service's duration.",
+        "status": "Status",
+        "notes": "Notes"
+      },
+      "actions": {
+        "create": "New appointment",
+        "edit": "Edit appointment",
+        "delete": "Delete appointment"
+      },
+      "form": {
+        "createTitle": "New appointment",
+        "editTitle": "Edit appointment",
+        "createDescription": "The service, patient and doctor can't be changed after booking.",
+        "editDescription": "Move the time, update the status or add notes."
+      },
+      "delete": {
+        "title": "Delete this appointment?",
+        "description": "This permanently removes the appointment. It can't be undone.",
+        "confirm": "Delete appointment"
+      },
+      "empty": {
+        "title": "No appointments yet",
+        "description": "Book a patient with a doctor to see it here.",
+        "filteredTitle": "No matching appointments",
+        "filteredDescription": "Try different filters or clear them."
+      },
+      "toast": {
+        "created": "Appointment booked",
+        "updated": "Appointment updated",
+        "deleted": "Appointment deleted"
+      }
+    }
+  },
+  "education": {
+    "courses": {
+      "title": "Courses",
+      "description": "Your courses, their dates, fees and how many seats are taken.",
+      "searchPlaceholder": "Search courses…",
+      "active": "Open",
+      "inactive": "Closed",
+      "columns": {
+        "course": "Course",
+        "dates": "Dates",
+        "seats": "Seats",
+        "fee": "Fee",
+        "status": "Status"
+      },
+      "fields": {
+        "nameAr": "Name (Arabic)",
+        "nameEn": "Name (English)",
+        "code": "Code",
+        "fee": "Fee",
+        "capacity": "Seats",
+        "capacityHint": "Leave empty for no limit.",
+        "startsOn": "Starts on",
+        "endsOn": "Ends on",
+        "isActive": "Open for enrollment"
+      },
+      "actions": {
+        "create": "New course",
+        "edit": "Edit course",
+        "delete": "Delete course"
+      },
+      "form": {
+        "createTitle": "New course",
+        "editTitle": "Edit course",
+        "description": "Seats can't go below the number of students already enrolled."
+      },
+      "delete": {
+        "title": "Delete {name}?",
+        "description": "This permanently removes the course. A course with enrollments can't be deleted.",
+        "confirm": "Delete course"
+      },
+      "empty": {
+        "title": "No courses yet",
+        "description": "Add a course to start enrolling students.",
+        "filteredTitle": "No matching courses",
+        "filteredDescription": "Try a different search or clear the filters."
+      },
+      "toast": {
+        "created": "Course created",
+        "updated": "Course updated",
+        "deleted": "Course deleted"
+      }
+    },
+    "enrollments": {
+      "title": "Enrollments",
+      "description": "Which students are in which course, and how far they got.",
+      "statuses": {
+        "enrolled": "Enrolled",
+        "completed": "Completed",
+        "dropped": "Dropped"
+      },
+      "columns": {
+        "lead": "Student",
+        "course": "Course",
+        "enrolledOn": "Enrolled on",
+        "status": "Status"
+      },
+      "fields": {
+        "course": "Course",
+        "lead": "Student (lead)",
+        "enrolledOn": "Enrolled on",
+        "status": "Status",
+        "notes": "Notes"
+      },
+      "actions": {
+        "create": "New enrollment",
+        "edit": "Edit enrollment",
+        "delete": "Delete enrollment"
+      },
+      "form": {
+        "createTitle": "New enrollment",
+        "editTitle": "Edit enrollment",
+        "createDescription": "The course and student can't be changed afterwards.",
+        "editDescription": "Update the status, date or notes."
+      },
+      "delete": {
+        "title": "Delete this enrollment?",
+        "description": "This permanently removes the enrollment and frees its seat.",
+        "confirm": "Delete enrollment"
+      },
+      "empty": {
+        "title": "No enrollments yet",
+        "description": "Enroll a student in a course to see it here.",
+        "filteredTitle": "No matching enrollments",
+        "filteredDescription": "Try different filters or clear them."
+      },
+      "toast": {
+        "created": "Student enrolled",
+        "updated": "Enrollment updated",
+        "deleted": "Enrollment deleted"
+      }
+    }
+  },
+  "automotive": {
+    "vehicles": {
+      "title": "Vehicles",
+      "description": "Your stock: what's available, reserved or sold, and at what price.",
+      "searchPlaceholder": "Search make, model or VIN…",
+      "statuses": {
+        "available": "Available",
+        "reserved": "Reserved",
+        "sold": "Sold"
+      },
+      "columns": {
+        "vehicle": "Vehicle",
+        "color": "Colour",
+        "price": "Price",
+        "status": "Status"
+      },
+      "fields": {
+        "make": "Make",
+        "model": "Model",
+        "year": "Year",
+        "color": "Colour",
+        "vin": "VIN",
+        "price": "Price",
+        "status": "Status"
+      },
+      "actions": {
+        "create": "New vehicle",
+        "edit": "Edit vehicle",
+        "delete": "Delete vehicle"
+      },
+      "form": {
+        "createTitle": "New vehicle",
+        "editTitle": "Edit vehicle",
+        "description": "A sold vehicle can't be booked for test drives."
+      },
+      "delete": {
+        "title": "Delete {name}?",
+        "description": "This permanently removes the vehicle. A vehicle with test drives can't be deleted.",
+        "confirm": "Delete vehicle"
+      },
+      "empty": {
+        "title": "No vehicles yet",
+        "description": "Add your stock to book test drives.",
+        "filteredTitle": "No matching vehicles",
+        "filteredDescription": "Try a different search or clear the filters."
+      },
+      "toast": {
+        "created": "Vehicle added",
+        "updated": "Vehicle updated",
+        "deleted": "Vehicle deleted"
+      }
+    },
+    "testDrives": {
+      "title": "Test drives",
+      "description": "Who is driving which car, and when.",
+      "statuses": {
+        "scheduled": "Scheduled",
+        "completed": "Completed",
+        "cancelled": "Cancelled",
+        "no_show": "No-show"
+      },
+      "columns": {
+        "when": "When",
+        "vehicle": "Vehicle",
+        "lead": "Customer",
+        "status": "Status"
+      },
+      "fields": {
+        "vehicle": "Vehicle",
+        "lead": "Customer (lead)",
+        "startsAt": "Starts at",
+        "startsAtHint": "Must be in the future. The car can't be booked twice at once.",
+        "status": "Status",
+        "notes": "Notes"
+      },
+      "actions": {
+        "create": "New test drive",
+        "edit": "Edit test drive",
+        "delete": "Delete test drive"
+      },
+      "form": {
+        "createTitle": "New test drive",
+        "editTitle": "Edit test drive",
+        "createDescription": "The vehicle and customer can't be changed after booking.",
+        "editDescription": "Move the time, update the status or add notes."
+      },
+      "delete": {
+        "title": "Delete this test drive?",
+        "description": "This permanently removes the test drive. It can't be undone.",
+        "confirm": "Delete test drive"
+      },
+      "empty": {
+        "title": "No test drives yet",
+        "description": "Book a customer into a car to see it here.",
+        "filteredTitle": "No matching test drives",
+        "filteredDescription": "Try different filters or clear them."
+      },
+      "toast": {
+        "created": "Test drive booked",
+        "updated": "Test drive updated",
+        "deleted": "Test drive deleted"
+      }
+    }
+  },
+  "agency": {
+    "packages": {
+      "title": "Packages",
+      "description": "The services you sell each month, what they include and their fee.",
+      "searchPlaceholder": "Search packages…",
+      "active": "Active",
+      "inactive": "Inactive",
+      "columns": {
+        "package": "Package",
+        "monthlyFee": "Monthly fee",
+        "activeEngagements": "Active clients",
+        "status": "Status"
+      },
+      "fields": {
+        "nameAr": "Name (Arabic)",
+        "nameEn": "Name (English)",
+        "code": "Code",
+        "monthlyFee": "Monthly fee",
+        "deliverables": "What's included",
+        "isActive": "Available to sell"
+      },
+      "actions": {
+        "create": "New package",
+        "edit": "Edit package",
+        "delete": "Delete package"
+      },
+      "form": {
+        "createTitle": "New package",
+        "editTitle": "Edit package",
+        "description": "New engagements take this monthly fee unless you set their own."
+      },
+      "delete": {
+        "title": "Delete {name}?",
+        "description": "This permanently removes the package. A package with engagements can't be deleted.",
+        "confirm": "Delete package"
+      },
+      "empty": {
+        "title": "No packages yet",
+        "description": "Add the packages you offer clients.",
+        "filteredTitle": "No matching packages",
+        "filteredDescription": "Try a different search or clear the filters."
+      },
+      "toast": {
+        "created": "Package created",
+        "updated": "Package updated",
+        "deleted": "Package deleted"
+      }
+    },
+    "engagements": {
+      "title": "Engagements",
+      "description": "Which client is on which package, for how much, and since when.",
+      "statuses": {
+        "proposed": "Proposed",
+        "active": "Active",
+        "paused": "Paused",
+        "ended": "Ended"
+      },
+      "columns": {
+        "lead": "Client",
+        "package": "Package",
+        "monthlyFee": "Monthly fee",
+        "period": "Period",
+        "status": "Status"
+      },
+      "fields": {
+        "package": "Package",
+        "lead": "Client (lead)",
+        "status": "Status",
+        "monthlyFee": "Monthly fee",
+        "monthlyFeeHint": "Leave empty to use the package's fee.",
+        "startsOn": "Starts on",
+        "endsOn": "Ends on",
+        "notes": "Notes"
+      },
+      "actions": {
+        "create": "New engagement",
+        "edit": "Edit engagement",
+        "delete": "Delete engagement"
+      },
+      "form": {
+        "createTitle": "New engagement",
+        "editTitle": "Edit engagement",
+        "createDescription": "It starts as proposed. The package and client can't be changed afterwards.",
+        "editDescription": "An ended engagement can't be reopened."
+      },
+      "delete": {
+        "title": "Delete this engagement?",
+        "description": "This permanently removes the engagement. It can't be undone.",
+        "confirm": "Delete engagement"
+      },
+      "empty": {
+        "title": "No engagements yet",
+        "description": "Sign a client onto a package to see it here.",
+        "filteredTitle": "No matching engagements",
+        "filteredDescription": "Try different filters or clear them."
+      },
+      "toast": {
+        "created": "Engagement created",
+        "updated": "Engagement updated",
+        "deleted": "Engagement deleted"
+      }
+    }
+  }
+}

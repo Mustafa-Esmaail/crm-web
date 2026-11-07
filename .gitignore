@@ -1,0 +1,15 @@
+node_modules
+.next
+.turbo
+dist
+coverage
+.env
+.env.local
+playwright-report
+test-results
+*.tsbuildinfo
+
+# Playwright
+test-results/
+playwright-report/
+apps/app/e2e/.auth/

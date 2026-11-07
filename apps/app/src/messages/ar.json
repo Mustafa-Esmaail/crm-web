@@ -1,0 +1,1980 @@
+{
+  "common": {
+    "appName": "Smart CRM",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "optional": "اختياري",
+    "close": "إغلاق"
+  },
+  "nav": {
+    "label": "التنقل الرئيسي",
+    "comingSoon": "قريباً",
+    "sections": {
+      "sales": "المبيعات",
+      "organization": "المؤسسة",
+      "admin": "الإدارة"
+    },
+    "items": {
+      "home": "لوحة التحكم",
+      "leads": "العملاء المحتملون",
+      "deals": "الصفقات",
+      "units": "الوحدات",
+      "employees": "الموظفون",
+      "departments": "الأقسام",
+      "teams": "الفرق",
+      "branches": "الفروع",
+      "orgChart": "الهيكل التنظيمي",
+      "roles": "الأدوار",
+      "auditLog": "سجل النشاط",
+      "settings": "الإعدادات",
+      "tasks": "المهام",
+      "projects": "المشاريع",
+      "pipelineSettings": "مسار المبيعات",
+      "exportRequests": "طلبات التصدير",
+      "channels": "القنوات",
+      "security": "الأمان",
+      "clinicServices": "الخدمات",
+      "clinicAppointments": "المواعيد",
+      "educationCourses": "الدورات",
+      "educationEnrollments": "التسجيلات",
+      "automotiveVehicles": "المركبات",
+      "automotiveTestDrives": "تجارب القيادة",
+      "agencyPackages": "الباقات",
+      "agencyEngagements": "التعاقدات"
+    }
+  },
+  "shell": {
+    "appName": "Smart CRM",
+    "tagline": "منصة إدارة العملاء",
+    "company": "الشركة",
+    "search": "ابحث عن أي شيء…",
+    "openMenu": "فتح القائمة",
+    "navigation": "التنقل",
+    "navigationDescription": "تصفّح أقسام التطبيق",
+    "collapseSidebar": "طي القائمة الجانبية",
+    "expandSidebar": "توسيع القائمة الجانبية",
+    "switchLanguage": "تغيير اللغة",
+    "languageName": {
+      "ar": "العربية",
+      "en": "English"
+    },
+    "toggleTheme": "تبديل المظهر الفاتح أو الداكن",
+    "userMenu": "قائمة الحساب",
+    "logout": "تسجيل الخروج",
+    "help": {
+      "action": "مركز المساعدة"
+    }
+  },
+  "home": {
+    "title": "الرئيسية",
+    "description": "ستظهر هنا نظرة عامة على مساحة عملك."
+  },
+  "dataTable": {
+    "columns": "الأعمدة",
+    "toggleColumns": "إظهار الأعمدة",
+    "clearAll": "مسح التصفية",
+    "clearFilter": "مسح تصفية {filter}",
+    "searchOptions": "بحث…",
+    "noOptions": "لا توجد نتائج",
+    "selectAll": "تحديد كل الصفوف",
+    "selectRow": "تحديد الصف",
+    "sortBy": "الترتيب حسب هذا العمود",
+    "range": "{from}–{to} من {total}",
+    "rowsPerPage": "عدد الصفوف في الصفحة",
+    "previousPage": "الصفحة السابقة",
+    "nextPage": "الصفحة التالية",
+    "goToPage": "الصفحة {page}",
+    "pageOf": "{page} / {pages}"
+  },
+  "feedback": {
+    "error": {
+      "title": "تعذّر التحميل",
+      "description": "حدث خطأ أثناء التحميل. يرجى المحاولة مرة أخرى.",
+      "retry": "إعادة المحاولة"
+    },
+    "noPermission": {
+      "title": "لا تملك صلاحية",
+      "description": "ليس لديك صلاحية للوصول إلى هذا. تواصل مع المسؤول إن احتجت إليه."
+    },
+    "confirm": {
+      "cancel": "إلغاء"
+    }
+  },
+  "status": {
+    "active": "نشط",
+    "inactive": "غير نشط",
+    "suspended": "موقوف",
+    "left": "غادر",
+    "project_planning": "قيد التخطيط",
+    "project_selling": "قيد البيع",
+    "project_completed": "مكتمل",
+    "unit_available": "متاحة",
+    "unit_reserved": "محجوزة",
+    "unit_sold": "مباعة",
+    "export_pending": "قيد الانتظار",
+    "export_approved": "تمت الموافقة",
+    "export_rejected": "مرفوض",
+    "booking_scheduled": "مجدول",
+    "booking_completed": "مكتمل",
+    "booking_cancelled": "ملغى",
+    "booking_no_show": "لم يحضر",
+    "enrollment_enrolled": "مسجّل",
+    "enrollment_completed": "أتمّ الدورة",
+    "enrollment_dropped": "انسحب",
+    "vehicle_available": "متاحة",
+    "vehicle_reserved": "محجوزة",
+    "vehicle_sold": "مباعة",
+    "engagement_proposed": "مقترح",
+    "engagement_active": "نشط",
+    "engagement_paused": "متوقف مؤقتاً",
+    "engagement_ended": "منتهٍ"
+  },
+  "tree": {
+    "expand": "توسيع",
+    "collapse": "طي"
+  },
+  "form": {
+    "select": "اختر…",
+    "search": "بحث…",
+    "noResults": "لا توجد نتائج",
+    "clear": "مسح الاختيار",
+    "pickDate": "اختر تاريخاً",
+    "showPassword": "إظهار كلمة المرور",
+    "hidePassword": "إخفاء كلمة المرور"
+  },
+  "validation": {
+    "required": "هذا الحقل مطلوب.",
+    "email": "أدخل بريداً إلكترونياً صحيحاً.",
+    "maxLength": "النص طويل جداً.",
+    "min": "القيمة منخفضة جداً.",
+    "max": "القيمة مرتفعة جداً.",
+    "passwordMismatch": "كلمتا المرور غير متطابقتين.",
+    "number": "أدخل رقماً.",
+    "phone": "أرقام فقط، مع + اختيارية في البداية (من 6 إلى 20 رقماً).",
+    "roleKey": "ابدأ بحرف، ثم استخدم حروفاً إنجليزية صغيرة أو أرقاماً أو شرطة سفلية.",
+    "passwordTooShort": "استخدم 8 أحرف على الأقل.",
+    "key": "استخدم حروفاً إنجليزية صغيرة وأرقاماً وشرطة سفلية، وابدأ بحرف.",
+    "color": "استخدم لوناً سداسياً مثل #3B82F6.",
+    "wonAndLost": "لا يمكن أن تكون المرحلة مكسوبة وخاسرة معاً.",
+    "time": "استخدم وقتاً مثل 08:30.",
+    "sameTime": "يجب أن يختلف وقت النهاية عن وقت البداية.",
+    "endBeforeStart": "لا يمكن أن يكون تاريخ النهاية قبل تاريخ البداية."
+  },
+  "audit": {
+    "diff": {
+      "hidden": "[مخفي]",
+      "empty": "فارغ",
+      "yes": "نعم",
+      "no": "لا"
+    }
+  },
+  "auth": {
+    "brand": {
+      "name": "Smart CRM",
+      "badge": "مصمم لشركات العقارات",
+      "headline": "كل عملائك وفريقك وصفقاتك في مكان واحد",
+      "subheadline": "الفروع والأقسام والفرق والموظفون، منظّمة وآمنة، مع سجل كامل لمن فعل ماذا ومتى.",
+      "footer": "© Smart CRM · جميع الحقوق محفوظة",
+      "highlights": {
+        "permissions": {
+          "title": "صلاحيات دقيقة",
+          "description": "لكل دور ما يراه فقط"
+        },
+        "activity": {
+          "title": "سجل نشاط كامل",
+          "description": "كل تعديل محفوظ"
+        },
+        "bilingual": {
+          "title": "عربي وإنجليزي",
+          "description": "واجهة RTL كاملة"
+        },
+        "structure": {
+          "title": "هيكل تنظيمي",
+          "description": "فروع وأقسام وفرق"
+        }
+      }
+    },
+    "fields": {
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "passwordConfirmation": "تأكيد كلمة المرور",
+      "companyName": "اسم الشركة",
+      "industry": "المجال",
+      "industryPlaceholder": "اختر مجال شركتك",
+      "ownerName": "اسمك",
+      "phone": "الهاتف",
+      "language": "اللغة"
+    },
+    "industries": {
+      "real_estate": "العقارات",
+      "education": "التعليم",
+      "clinic": "عيادة",
+      "automotive": "السيارات",
+      "agency": "وكالة",
+      "other": "أخرى"
+    },
+    "languages": {
+      "ar": "العربية",
+      "en": "English"
+    },
+    "login": {
+      "title": "مرحباً بعودتك",
+      "description": "سجّل الدخول إلى مساحة عمل شركتك.",
+      "submit": "تسجيل الدخول",
+      "demo": "جرّب الحساب التجريبي",
+      "or": "أو",
+      "noAccount": "مستخدم جديد؟",
+      "register": "سجّل شركتك"
+    },
+    "register": {
+      "title": "سجّل شركتك",
+      "description": "أنشئ مساحة عملك في دقيقة.",
+      "submit": "إنشاء الحساب",
+      "haveAccount": "لديك حساب؟",
+      "login": "تسجيل الدخول"
+    }
+  },
+  "branches": {
+    "title": "الفروع",
+    "description": "المكاتب والمواقع التي تعمل منها شركتك.",
+    "searchPlaceholder": "ابحث في الفروع…",
+    "filters": {
+      "status": "الحالة"
+    },
+    "status": {
+      "active": "نشط",
+      "inactive": "غير نشط"
+    },
+    "columns": {
+      "name": "الفرع",
+      "city": "المدينة",
+      "phone": "الهاتف",
+      "manager": "المدير",
+      "employees": "الموظفون",
+      "status": "الحالة"
+    },
+    "actions": {
+      "create": "فرع جديد",
+      "edit": "تعديل",
+      "delete": "حذف"
+    },
+    "form": {
+      "createTitle": "فرع جديد",
+      "editTitle": "تعديل الفرع",
+      "description": "بيانات الفرع ومن يديره."
+    },
+    "fields": {
+      "nameAr": "الاسم (عربي)",
+      "nameEn": "الاسم (إنجليزي)",
+      "code": "الرمز",
+      "city": "المدينة",
+      "phone": "الهاتف",
+      "manager": "المدير",
+      "address": "العنوان",
+      "isActive": "نشط"
+    },
+    "delete": {
+      "title": "حذف {name}؟",
+      "description": "سيتم حذف الفرع نهائياً ولا يمكن التراجع.",
+      "confirm": "حذف الفرع"
+    },
+    "empty": {
+      "title": "لا توجد فروع بعد",
+      "description": "أنشئ أول فرع لتبدأ تنظيم شركتك.",
+      "filteredTitle": "لا توجد فروع مطابقة",
+      "filteredDescription": "جرّب بحثاً مختلفاً أو امسح التصفية."
+    },
+    "toast": {
+      "created": "تم إنشاء الفرع",
+      "updated": "تم تحديث الفرع",
+      "deleted": "تم حذف الفرع"
+    }
+  },
+  "departments": {
+    "title": "الأقسام",
+    "description": "كيف تنقسم شركتك، ومن يدير كل جزء.",
+    "searchPlaceholder": "ابحث في الأقسام…",
+    "filters": {
+      "branch": "الفرع"
+    },
+    "views": {
+      "tree": "شجرة",
+      "list": "قائمة"
+    },
+    "columns": {
+      "name": "القسم",
+      "branch": "الفرع",
+      "manager": "المدير",
+      "employees": "الموظفون",
+      "status": "الحالة"
+    },
+    "actions": {
+      "create": "قسم جديد",
+      "menu": "الإجراءات",
+      "edit": "تعديل",
+      "addChild": "إضافة قسم فرعي",
+      "move": "نقل",
+      "delete": "حذف"
+    },
+    "form": {
+      "createTitle": "قسم جديد",
+      "editTitle": "تعديل القسم",
+      "description": "مكانه في الهيكل والفرع التابع له ومن يديره."
+    },
+    "fields": {
+      "nameAr": "الاسم (عربي)",
+      "nameEn": "الاسم (إنجليزي)",
+      "code": "الرمز",
+      "parent": "القسم الأب",
+      "noParent": "لا يوجد (مستوى أعلى)",
+      "branch": "الفرع",
+      "noBranch": "بدون فرع",
+      "manager": "المدير",
+      "isActive": "نشط"
+    },
+    "move": {
+      "title": "نقل {name}",
+      "description": "اختر مكان هذا القسم في الهيكل. تنتقل أقسامه الفرعية معه.",
+      "newParent": "القسم الأب الجديد",
+      "root": "لا يوجد (مستوى أعلى)",
+      "confirm": "نقل"
+    },
+    "delete": {
+      "title": "حذف {name}؟",
+      "description": "سيتم حذف القسم نهائياً ولا يمكن التراجع.",
+      "confirm": "حذف القسم"
+    },
+    "empty": {
+      "title": "لا توجد أقسام بعد",
+      "description": "أنشئ أول قسم لتنظيم شركتك.",
+      "filteredTitle": "لا توجد أقسام مطابقة",
+      "filteredDescription": "جرّب بحثاً مختلفاً أو امسح التصفية."
+    },
+    "toast": {
+      "created": "تم إنشاء القسم",
+      "updated": "تم تحديث القسم",
+      "moved": "تم نقل القسم",
+      "deleted": "تم حذف القسم"
+    }
+  },
+  "teams": {
+    "title": "الفرق",
+    "description": "مجموعات الأشخاص الذين يعملون معاً داخل كل قسم.",
+    "searchPlaceholder": "ابحث في الفرق…",
+    "filters": {
+      "department": "القسم"
+    },
+    "columns": {
+      "name": "الفريق",
+      "department": "القسم",
+      "leader": "القائد",
+      "members": "الأعضاء",
+      "status": "الحالة"
+    },
+    "actions": {
+      "create": "فريق جديد",
+      "edit": "تعديل",
+      "delete": "حذف"
+    },
+    "form": {
+      "createTitle": "فريق جديد",
+      "editTitle": "تعديل الفريق",
+      "description": "القسم التابع له الفريق ومن يقوده."
+    },
+    "fields": {
+      "nameAr": "الاسم (عربي)",
+      "nameEn": "الاسم (إنجليزي)",
+      "department": "القسم",
+      "departmentPlaceholder": "اختر قسماً",
+      "leader": "قائد الفريق",
+      "isActive": "نشط"
+    },
+    "delete": {
+      "title": "حذف {name}؟",
+      "description": "سيتم حذف الفريق نهائياً ولا يمكن التراجع.",
+      "confirm": "حذف الفريق"
+    },
+    "empty": {
+      "title": "لا توجد فرق بعد",
+      "description": "أنشئ فريقاً لتجميع الأشخاص في قسم.",
+      "filteredTitle": "لا توجد فرق مطابقة",
+      "filteredDescription": "جرّب بحثاً مختلفاً أو امسح التصفية."
+    },
+    "toast": {
+      "created": "تم إنشاء الفريق",
+      "updated": "تم تحديث الفريق",
+      "deleted": "تم حذف الفريق"
+    }
+  },
+  "employees": {
+    "title": "الموظفون",
+    "description": "إدارة فريق العمل والأقسام والتسلسل الإداري.",
+    "searchPlaceholder": "بحث بالاسم، البريد، الكود…",
+    "comingSoon": "قريباً",
+    "never": "لم يسجل دخولاً",
+    "locales": {
+      "ar": "العربية",
+      "en": "English"
+    },
+    "kpis": {
+      "total": "إجمالي الموظفين",
+      "active": "نشط الآن",
+      "activeShare": "{percent}% من الفريق",
+      "suspended": "موقوفون",
+      "needsReview": "يحتاج مراجعة",
+      "teams": "فرق المبيعات",
+      "inBranches": "{count, plural, one {في فرع} two {في فرعين} few {في # فروع} other {في # فرعاً}}"
+    },
+    "filters": {
+      "status": "الحالة",
+      "branch": "الفرع",
+      "department": "القسم",
+      "team": "الفريق",
+      "manager": "المدير المباشر",
+      "includeSubDepartments": "شمل الأقسام الفرعية"
+    },
+    "columns": {
+      "employee": "الموظف",
+      "code": "الكود",
+      "department": "القسم",
+      "team": "الفريق",
+      "branch": "الفرع",
+      "status": "الحالة",
+      "lastLogin": "آخر دخول"
+    },
+    "actions": {
+      "create": "إضافة موظف",
+      "import": "استيراد",
+      "export": "تصدير",
+      "menu": "الإجراءات",
+      "view": "عرض الملف",
+      "edit": "تعديل",
+      "suspend": "إيقاف",
+      "activate": "تفعيل",
+      "offboard": "إنهاء الخدمة"
+    },
+    "form": {
+      "createTitle": "إضافة موظف",
+      "editTitle": "تعديل موظف",
+      "description": "بيانات الحساب ومكانه في الشركة ومن يتبعه."
+    },
+    "fields": {
+      "name": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "passwordKeep": "اتركها فارغة للإبقاء على كلمة المرور الحالية.",
+      "code": "كود الموظف",
+      "phone": "الهاتف",
+      "jobTitle": "المسمى الوظيفي",
+      "team": "الفريق",
+      "teamHint": "اختيار الفريق يملأ القسم والفرع تلقائياً.",
+      "department": "القسم",
+      "branch": "الفرع",
+      "manager": "المدير المباشر",
+      "hiredAt": "تاريخ التعيين",
+      "commissionRate": "نسبة العمولة (%)",
+      "language": "اللغة",
+      "none": "لا يوجد"
+    },
+    "status": {
+      "suspend": {
+        "title": "إيقاف {name}؟",
+        "description": "سيتم تسجيل خروجه ولن يتمكن من الدخول حتى تعيد تفعيله.",
+        "confirm": "إيقاف"
+      },
+      "activate": {
+        "title": "تفعيل {name}؟",
+        "description": "سيتمكن من تسجيل الدخول من جديد.",
+        "confirm": "تفعيل"
+      }
+    },
+    "offboard": {
+      "title": "إنهاء خدمة {name}",
+      "description": "سيتم إيقاف الدخول ونقل مسؤولياته لموظف آخر",
+      "summary": {
+        "title": "سيتم نقل:",
+        "reports": "{count, plural, =0 {لا موظفين يتبعونه مباشرة} one {موظف واحد يتبعه مباشرة} two {موظفان يتبعانه مباشرة} few {# موظفين يتبعونه مباشرة} other {# موظفاً يتبعونه مباشرة}}",
+        "leadsTeam": "قيادة {team}",
+        "leadsAndDeals": "العملاء المحتملون والصفقات المفتوحة",
+        "soon": "قريبًا"
+      },
+      "transferTo": "نقل المسؤوليات إلى",
+      "transferPlaceholder": "اختر زميلاً",
+      "reason": "السبب",
+      "reasonPlaceholder": "مثال: استقالة – آخر يوم عمل 31 أكتوبر",
+      "loggedNote": "سيتم تسجيل هذا الإجراء في سجل النشاط.",
+      "confirm": "تأكيد إنهاء الخدمة"
+    },
+    "profile": {
+      "tabs": {
+        "overview": "نظرة عامة",
+        "subordinates": "التابعون",
+        "deals": "العملاء والصفقات",
+        "roles": "الأدوار والصلاحيات",
+        "activity": "سجل النشاط"
+      },
+      "basic": {
+        "title": "البيانات الأساسية",
+        "code": "كود الموظف",
+        "email": "البريد",
+        "phone": "الهاتف",
+        "hiredAt": "تاريخ التعيين",
+        "commission": "نسبة العمولة",
+        "language": "اللغة",
+        "lastLogin": "آخر دخول",
+        "never": "لم يسجل دخولاً بعد"
+      },
+      "activity": {
+        "recentTitle": "آخر النشاطات",
+        "viewAll": "عرض الكل",
+        "empty": "لا يوجد نشاط بعد",
+        "someone": "شخص ما",
+        "changedField": "{user} غيّر {field}",
+        "actions": {
+          "created": "{user} أضاف الموظف",
+          "updated": "{user} عدّل البيانات",
+          "login": "{user} سجّل الدخول",
+          "suspended": "{user} أوقف الموظف",
+          "activated": "{user} فعّل الموظف",
+          "offboarded": "{user} أنهى خدمة الموظف",
+          "deleted": "{user} حذف السجل",
+          "other": "{user}: {action}"
+        }
+      },
+      "fields": {
+        "name": "الاسم",
+        "email": "البريد",
+        "phone": "الهاتف",
+        "job_title": "المسمى الوظيفي",
+        "employee_code": "كود الموظف",
+        "status": "الحالة",
+        "branch_id": "الفرع",
+        "department_id": "القسم",
+        "team_id": "الفريق",
+        "manager_id": "المدير المباشر",
+        "hired_at": "تاريخ التعيين",
+        "commission_rate": "نسبة العمولة",
+        "locale": "اللغة",
+        "password": "كلمة المرور"
+      },
+      "reportingLine": {
+        "title": "التسلسل الإداري",
+        "current": "هذا الموظف",
+        "none": "غير موجود في الهيكل الإداري.",
+        "managerOnly": "يتبع {name}"
+      },
+      "target": {
+        "title": "هدف الشهر",
+        "unavailable": "تتوفر الأهداف مع وحدة الصفقات."
+      },
+      "subordinates": {
+        "emptyTitle": "لا يوجد تابعون",
+        "emptyDescription": "لا أحد يتبع هذا الشخص.",
+        "count": "{count, plural, one {شخص واحد} two {شخصان} few {# أشخاص} other {# شخصاً}} تحت هذا الموظف"
+      },
+      "comingSoon": {
+        "deals": {
+          "title": "العملاء والصفقات",
+          "description": "ستظهر هنا عملاء هذا الموظف وصفقاته عند إطلاق وحدة المبيعات."
+        },
+        "roles": {
+          "title": "الأدوار والصلاحيات",
+          "description": "تعيين الأدوار لهذا الموظف قادم قريباً."
+        }
+      }
+    },
+    "empty": {
+      "title": "لا يوجد موظفون بعد",
+      "description": "أضف أول موظف للبدء.",
+      "filteredTitle": "لا يوجد موظفون مطابقون",
+      "filteredDescription": "جرّب بحثاً مختلفاً أو امسح التصفية."
+    },
+    "toast": {
+      "created": "تمت إضافة الموظف",
+      "updated": "تم تحديث الموظف",
+      "suspended": "تم إيقاف الموظف",
+      "activated": "تم تفعيل الموظف",
+      "offboarded": "تم إنهاء خدمة الموظف"
+    }
+  },
+  "leads": {
+    "title": "العملاء المحتملون",
+    "description": "كل من أبدى اهتماماً، ومن يتابعه، وأين هم في المسار.",
+    "searchPlaceholder": "ابحث بالاسم أو الهاتف أو البريد…",
+    "unassigned": "غير مسند",
+    "noActivity": "لا نشاط بعد",
+    "filters": {
+      "stage": "المرحلة",
+      "source": "المصدر",
+      "owner": "المسؤول",
+      "team": "الفريق",
+      "assignment": "الإسناد",
+      "unassigned": "غير مسند"
+    },
+    "columns": {
+      "lead": "العميل المحتمل",
+      "stage": "المرحلة",
+      "source": "المصدر",
+      "owner": "المسؤول",
+      "budget": "الميزانية",
+      "lastActivity": "آخر نشاط"
+    },
+    "actions": {
+      "create": "عميل محتمل جديد",
+      "menu": "الإجراءات",
+      "view": "عرض العميل",
+      "edit": "تعديل",
+      "changeStage": "تغيير المرحلة",
+      "assign": "إسناد",
+      "delete": "حذف",
+      "import": "استيراد",
+      "export": "تصدير"
+    },
+    "selection": {
+      "count": "{count, plural, one {تم تحديد عميل واحد} two {تم تحديد عميلين} few {تم تحديد # عملاء} many {تم تحديد # عميلاً} other {تم تحديد # عميل}}",
+      "assign": "إسناد إلى…",
+      "clear": "مسح التحديد"
+    },
+    "form": {
+      "createTitle": "عميل محتمل جديد",
+      "editTitle": "تعديل العميل",
+      "description": "بيانات التواصل، ومصدر العميل، ومن يتولّى متابعته."
+    },
+    "fields": {
+      "name": "الاسم",
+      "phone": "الهاتف",
+      "email": "البريد الإلكتروني",
+      "budget": "الميزانية",
+      "source": "المصدر",
+      "team": "الفريق",
+      "owner": "المسؤول",
+      "notes": "ملاحظات",
+      "none": "بدون"
+    },
+    "stage": {
+      "title": "نقل {name}",
+      "description": "اختر المرحلة التي يوجد فيها هذا العميل الآن.",
+      "current": "موجود حالياً في {stage}.",
+      "target": "المرحلة الجديدة",
+      "choose": "اختر مرحلة",
+      "lostReason": "لماذا خسرته؟",
+      "lostReasonHint": "اختياري، لكنه يفيد عند مراجعة العملاء الخاسرين لاحقاً.",
+      "confirm": "نقل العميل"
+    },
+    "assign": {
+      "titleOne": "إسناد {name}",
+      "titleMany": "{count, plural, one {إسناد عميل واحد} two {إسناد عميلين} few {إسناد # عملاء} many {إسناد # عميلاً} other {إسناد # عميل}}",
+      "description": "يصبح المسؤول الجديد مسؤولاً عن المتابعة.",
+      "owner": "المسؤول الجديد",
+      "confirm": "إسناد"
+    },
+    "delete": {
+      "title": "حذف {name}؟",
+      "description": "سيتم حذف العميل ونشاطه نهائياً ولا يمكن التراجع.",
+      "confirm": "حذف العميل"
+    },
+    "info": {
+      "title": "بيانات العميل",
+      "phone": "الهاتف",
+      "email": "البريد",
+      "budget": "الميزانية",
+      "source": "المصدر",
+      "owner": "المسؤول",
+      "team": "الفريق",
+      "created": "تاريخ الإضافة",
+      "lostReason": "سبب الخسارة",
+      "notes": "ملاحظات",
+      "unassigned": "غير مسند"
+    },
+    "activity": {
+      "title": "النشاط",
+      "typeLabel": "نوع النشاط",
+      "placeholder": "ماذا حدث؟ مكالمة، اجتماع، ملاحظة…",
+      "log": "تسجيل نشاط",
+      "empty": "لا شيء مسجّل بعد",
+      "types": {
+        "note": "ملاحظة",
+        "call": "مكالمة",
+        "meeting": "اجتماع",
+        "whatsapp": "واتساب",
+        "email": "بريد إلكتروني",
+        "assigned": "إسناد",
+        "stage_changed": "تغيير المرحلة"
+      }
+    },
+    "empty": {
+      "title": "لا يوجد عملاء محتملون بعد",
+      "description": "أضف أول عميل لتبدأ بناء المسار.",
+      "filteredTitle": "لا يوجد عملاء مطابقون",
+      "filteredDescription": "جرّب بحثاً مختلفاً أو امسح التصفية."
+    },
+    "toast": {
+      "created": "تم إنشاء العميل",
+      "updated": "تم تحديث العميل",
+      "deleted": "تم حذف العميل",
+      "stageChanged": "تم نقل العميل",
+      "assigned": "تم إسناد العميل",
+      "activityLogged": "تم تسجيل النشاط"
+    },
+    "export": {
+      "pending": "تم إرسال التصدير للموافقة. يمكنك تنزيله بعد موافقة المدير.",
+      "failed": "تعذر تصدير العملاء المحتملين."
+    },
+    "import": {
+      "title": "استيراد عملاء محتملين",
+      "description": "ارفع ملف CSV. افحصه أولاً لترى ما سيحدث، ثم استورد الصفوف الصالحة.",
+      "template": "تنزيل القالب",
+      "choose": "اختيار ملف CSV",
+      "file": "ملف CSV",
+      "noFile": "لم يتم اختيار ملف",
+      "check": "فحص الملف",
+      "import": "استيراد {count, plural, one {# عميل} other {# عميل}}",
+      "done": "تم استيراد {count, plural, one {# عميل} other {# عميل}}",
+      "failed": "تعذرت قراءة الملف.",
+      "report": {
+        "total": "الصفوف",
+        "valid": "صالحة",
+        "duplicates": "مكررة",
+        "failed": "فاشلة",
+        "row": "الصف {row}:",
+        "duplicatesHint": "صفوف برقم هاتف موجود مسبقاً: {rows}."
+      }
+    },
+    "messages": {
+      "title": "الرسائل",
+      "empty": "لا توجد رسائل بعد.",
+      "placeholder": "اكتب رسالة…",
+      "send": "إرسال",
+      "channel": "الإرسال عبر",
+      "failed": "تعذر إرسال الرسالة.",
+      "noChannel": "لا توجد قناة واتساب أو رسائل نصية نشطة.",
+      "loadingChannels": "جارٍ تحميل القنوات…"
+    }
+  },
+  "deals": {
+    "title": "الصفقات",
+    "description": "الفرص المارّة عبر مسار مبيعاتك، وقيمتها.",
+    "searchPlaceholder": "ابحث في الصفقات…",
+    "unassigned": "غير مسند",
+    "views": {
+      "board": "المسار",
+      "list": "قائمة"
+    },
+    "board": {
+      "count": "{count, plural, one {صفقة واحدة} two {صفقتان} few {# صفقات} many {# صفقة} other {# صفقة}}",
+      "empty": "لا توجد صفقات هنا",
+      "limit": "نعرض أول {limit} من {total} صفقة. ضيّق التصفية لترى الباقي."
+    },
+    "filters": {
+      "stage": "المرحلة",
+      "status": "الحالة",
+      "owner": "المسؤول",
+      "statuses": {
+        "open": "مفتوحة",
+        "won": "مكتسبة",
+        "lost": "خاسرة"
+      }
+    },
+    "columns": {
+      "deal": "الصفقة",
+      "stage": "المرحلة",
+      "value": "القيمة",
+      "owner": "المسؤول",
+      "expectedClose": "الإغلاق المتوقع"
+    },
+    "actions": {
+      "create": "صفقة جديدة",
+      "menu": "الإجراءات",
+      "edit": "تعديل",
+      "changeStage": "تغيير المرحلة",
+      "assign": "إسناد",
+      "delete": "حذف"
+    },
+    "form": {
+      "createTitle": "صفقة جديدة",
+      "editTitle": "تعديل الصفقة",
+      "description": "ماذا يُباع، وبكم، ومن المسؤول."
+    },
+    "fields": {
+      "title": "العنوان",
+      "value": "القيمة",
+      "expectedClose": "تاريخ الإغلاق المتوقع",
+      "lead": "العميل المحتمل",
+      "owner": "المسؤول",
+      "notes": "ملاحظات"
+    },
+    "stage": {
+      "title": "نقل {name}",
+      "description": "اختر المرحلة التي توجد فيها هذه الصفقة الآن.",
+      "current": "موجودة حالياً في {stage}.",
+      "target": "المرحلة الجديدة",
+      "choose": "اختر مرحلة",
+      "lostReason": "لماذا خسرتها؟",
+      "lostReasonHint": "اختياري، لكنه يفيد عند مراجعة الصفقات الخاسرة لاحقاً.",
+      "confirm": "نقل الصفقة"
+    },
+    "assign": {
+      "title": "إسناد {name}",
+      "description": "يصبح المسؤول الجديد مسؤولاً عن إغلاقها.",
+      "owner": "المسؤول الجديد",
+      "confirm": "إسناد"
+    },
+    "delete": {
+      "title": "حذف {name}؟",
+      "description": "ستُحذف الصفقة نهائياً ولا يمكن التراجع.",
+      "confirm": "حذف الصفقة"
+    },
+    "empty": {
+      "title": "لا توجد صفقات بعد",
+      "description": "أنشئ أول صفقة لتبدأ متابعة مسار مبيعاتك.",
+      "filteredTitle": "لا توجد صفقات مطابقة",
+      "filteredDescription": "جرّب بحثاً مختلفاً أو امسح التصفية."
+    },
+    "toast": {
+      "created": "تم إنشاء الصفقة",
+      "updated": "تم تحديث الصفقة",
+      "deleted": "تم حذف الصفقة",
+      "stageChanged": "تم نقل الصفقة",
+      "assigned": "تم إسناد الصفقة"
+    },
+    "info": {
+      "title": "تفاصيل الصفقة",
+      "value": "القيمة",
+      "commission": "العمولة",
+      "lead": "العميل المحتمل",
+      "owner": "المسؤول",
+      "expectedClose": "الإغلاق المتوقع",
+      "closedAt": "تاريخ الإغلاق",
+      "created": "تاريخ الإنشاء",
+      "lostReason": "سبب الخسارة",
+      "notes": "ملاحظات",
+      "unassigned": "غير مسند"
+    }
+  },
+  "roles": {
+    "title": "الأدوار والصلاحيات",
+    "description": "حدّد من يستطيع رؤية ماذا وفعل ماذا في شركتك.",
+    "columns": {
+      "name": "الدور",
+      "description": "الوصف",
+      "employees": "الأشخاص",
+      "type": "النوع"
+    },
+    "type": {
+      "system": "أساسي",
+      "custom": "مخصص"
+    },
+    "actions": {
+      "create": "دور جديد",
+      "edit": "تعديل",
+      "delete": "حذف",
+      "permissions": "إدارة الصلاحيات"
+    },
+    "form": {
+      "createTitle": "دور جديد",
+      "editTitle": "تعديل الدور",
+      "description": "سمّ الدور، ثم حدّد ما يستطيع فعله."
+    },
+    "fields": {
+      "nameAr": "الاسم (عربي)",
+      "nameEn": "الاسم (إنجليزي)",
+      "key": "المعرّف",
+      "keyHint": "رمز قصير مثل support_lead. اتركه فارغاً ليُنشأ تلقائياً.",
+      "description": "الوصف"
+    },
+    "delete": {
+      "title": "حذف {name}؟",
+      "description": "سيتم حذف الدور نهائياً ولا يمكن التراجع.",
+      "confirm": "حذف الدور"
+    },
+    "empty": {
+      "title": "لا توجد أدوار بعد",
+      "description": "أنشئ دوراً لتبدأ منح الناس الوصول."
+    },
+    "editor": {
+      "back": "كل الأدوار",
+      "ownerNote": "دور المالك يملك كل الصلاحيات دائماً، مهما كان المضبوط هنا.",
+      "readOnly": "يمكنك مشاهدة هذا الدور دون تغييره.",
+      "tabs": {
+        "permissions": "الصلاحيات",
+        "scopes": "نطاق البيانات",
+        "fields": "صلاحيات الحقول"
+      },
+      "unsaved": "لديك تغييرات غير محفوظة",
+      "saved": "تم حفظ كل التغييرات",
+      "discard": "تجاهل",
+      "save": "حفظ التغييرات"
+    },
+    "assign": {
+      "intro": "حدّد كل دور يجب أن يملكه هذا الشخص. وصوله هو مجموع كل أدواره.",
+      "readOnly": "هذه هي الأدوار التي يملكها هذا الشخص.",
+      "manage": "إدارة الأدوار"
+    },
+    "scopes": {
+      "intro": "حدّد مقدار بيانات كل وحدة يستطيع هذا الدور الوصول إليه."
+    },
+    "fieldAccess": {
+      "intro": "اخفِ حقولاً معيّنة أو اقفلها عن هذا الدور، مثل أرقام الهاتف أو الميزانيات."
+    },
+    "toast": {
+      "created": "تم إنشاء الدور",
+      "updated": "تم تحديث الدور",
+      "deleted": "تم حذف الدور",
+      "assigned": "تم تحديث الأدوار",
+      "permissionsSaved": "تم حفظ الصلاحيات",
+      "scopesSaved": "تم حفظ نطاق البيانات",
+      "fieldsSaved": "تم حفظ صلاحيات الحقول"
+    }
+  },
+  "notifications": {
+    "title": "الإشعارات",
+    "withUnread": "الإشعارات، {count, plural, one {واحد غير مقروء} two {اثنان غير مقروءين} few {# غير مقروءة} other {# غير مقروء}}",
+    "markAllRead": "تعليم الكل كمقروء",
+    "loading": "جارٍ التحميل…",
+    "empty": "لا جديد لديك"
+  },
+  "orgChart": {
+    "title": "الهيكل التنظيمي",
+    "description": "التسلسل الإداري لـ {count, plural, one {# موظف نشط} two {موظفَين نشطَين} few {# موظفين نشطين} many {# موظفًا نشطًا} other {# موظف نشط}}",
+    "modes": {
+      "manager": "حسب المدير",
+      "department": "حسب القسم"
+    },
+    "export": "تصدير PDF",
+    "search": "ابحث في الهيكل…",
+    "zoomIn": "تكبير",
+    "zoomOut": "تصغير",
+    "fit": "ملاءمة الشاشة",
+    "expand": "إظهار المرؤوسين",
+    "collapse": "إخفاء المرؤوسين",
+    "count": "{count, plural, =0 {لا أحد} one {شخص واحد} two {شخصان} few {# أشخاص} many {# شخصًا} other {# شخص}}",
+    "empty": {
+      "title": "لا يوجد ما يُعرض بعد",
+      "description": "أضف موظفين وحدّد المدراء لبناء الهيكل."
+    }
+  },
+  "auditLog": {
+    "title": "سجل النشاط",
+    "description": "من غيّر ماذا، ومتى.",
+    "filters": {
+      "action": "الإجراء",
+      "module": "الوحدة",
+      "user": "المستخدم",
+      "from": "من تاريخ",
+      "to": "إلى تاريخ"
+    },
+    "columns": {
+      "when": "الوقت",
+      "user": "المستخدم",
+      "action": "الإجراء",
+      "module": "الوحدة",
+      "record": "السجل"
+    },
+    "actions": {
+      "view": "عرض التفاصيل",
+      "created": "إنشاء",
+      "updated": "تعديل",
+      "deleted": "حذف",
+      "login": "تسجيل دخول",
+      "logout": "تسجيل خروج",
+      "suspended": "إيقاف",
+      "activated": "تفعيل",
+      "offboarded": "إنهاء خدمة"
+    },
+    "modules": {
+      "employees": "الموظفون",
+      "branches": "الفروع",
+      "departments": "الأقسام",
+      "teams": "الفرق",
+      "leads": "العملاء المحتملون",
+      "deals": "الصفقات",
+      "deal_settings": "إعدادات الصفقات",
+      "real_estate": "العقارات"
+    },
+    "drawer": {
+      "title": "تفاصيل السجل",
+      "user": "المستخدم",
+      "when": "الوقت",
+      "record": "السجل",
+      "ip": "عنوان IP",
+      "request": "الطلب",
+      "agent": "المتصفح",
+      "changes": "التغييرات",
+      "noChanges": "لم يغيّر هذا السجل أي حقول."
+    },
+    "empty": {
+      "title": "لا يوجد نشاط بعد",
+      "description": "ستظهر هنا التغييرات التي تتم في مساحة عملك.",
+      "filteredTitle": "لا توجد سجلات مطابقة",
+      "filteredDescription": "جرّب تصفية مختلفة أو امسحها."
+    }
+  },
+  "errors": {
+    "network": "تعذّر الاتصال بالخادم. تحقّق من اتصالك وحاول مرة أخرى.",
+    "forbidden": "ليس لديك صلاحية لتنفيذ هذا الإجراء.",
+    "notFound": "لم نعثر على ما تبحث عنه.",
+    "unknown": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
+  },
+  "tasks": {
+    "title": "المهام",
+    "description": "متابعات ومهام لك ولفريقك، مع مواعيد استحقاق وأولويات.",
+    "searchPlaceholder": "ابحث في المهام…",
+    "overdue": "متأخرة",
+    "columns": {
+      "task": "المهمة",
+      "priority": "الأولوية",
+      "due": "الاستحقاق",
+      "owner": "المسؤول"
+    },
+    "filters": {
+      "status": "الحالة",
+      "priority": "الأولوية",
+      "owner": "المسؤول",
+      "statuses": {
+        "open": "مفتوحة",
+        "overdue": "متأخرة",
+        "done": "مكتملة"
+      },
+      "priorities": {
+        "high": "عالية",
+        "normal": "عادية",
+        "low": "منخفضة"
+      }
+    },
+    "actions": {
+      "create": "مهمة جديدة",
+      "edit": "تعديل المهمة",
+      "delete": "حذف المهمة",
+      "complete": "تمييز كمكتملة",
+      "reopen": "إعادة فتح",
+      "assign": "إسناد المهمة"
+    },
+    "assign": {
+      "title": "إسناد {name}",
+      "current": "مسندة حالياً إلى {name}. سيصل إشعار للمسؤول الجديد.",
+      "unassigned": "لا يوجد مسؤول عن هذه المهمة بعد. سيصل إشعار للمسؤول الجديد.",
+      "owner": "المسؤول الجديد",
+      "confirm": "إسناد"
+    },
+    "form": {
+      "createTitle": "مهمة جديدة",
+      "editTitle": "تعديل المهمة",
+      "description": "ما المطلوب، ومتى، ومن المسؤول عنه."
+    },
+    "fields": {
+      "title": "العنوان",
+      "priority": "الأولوية",
+      "due": "تاريخ الاستحقاق",
+      "owner": "المسؤول",
+      "description": "التفاصيل"
+    },
+    "delete": {
+      "title": "حذف {name}؟",
+      "description": "سيتم حذف المهمة نهائياً ولا يمكن التراجع.",
+      "confirm": "حذف المهمة"
+    },
+    "empty": {
+      "title": "لا توجد مهام بعد",
+      "description": "أضف مهمة لتتابع موعدك القادم.",
+      "filteredTitle": "لا توجد مهام مطابقة",
+      "filteredDescription": "جرّب بحثاً مختلفاً أو امسح التصفيات."
+    },
+    "toast": {
+      "created": "تم إنشاء المهمة",
+      "updated": "تم تحديث المهمة",
+      "deleted": "تم حذف المهمة",
+      "completed": "تم إكمال المهمة",
+      "reopened": "تمت إعادة فتح المهمة",
+      "assigned": "تم إسناد المهمة"
+    },
+    "related": {
+      "title": "المهام",
+      "empty": "لا توجد مهام مرتبطة بعد."
+    }
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "description": "أداء العملاء المحتملين والصفقات.",
+    "periods": {
+      "7": "٧ أيام",
+      "30": "٣٠ يوماً",
+      "90": "٩٠ يوماً",
+      "all": "كل الفترات"
+    },
+    "kpi": {
+      "leads": "العملاء المحتملون",
+      "leadsOpen": "{count} مفتوح",
+      "conversion": "معدل التحويل",
+      "leadsWon": "{count} تم كسبه",
+      "deals": "الصفقات",
+      "dealsOpen": "{count} مفتوحة",
+      "dealsWon": "الصفقات المكسوبة",
+      "dealsLost": "{count} خاسرة",
+      "pipelineValue": "قيمة الصفقات المفتوحة",
+      "wonValue": "قيمة المكسوب",
+      "commission": "العمولة"
+    },
+    "byStage": "العملاء حسب المرحلة",
+    "bySource": "العملاء حسب المصدر",
+    "noSource": "بدون مصدر",
+    "empty": "لا توجد بيانات لهذه الفترة",
+    "agents": {
+      "title": "أداء الفريق",
+      "description": "العملاء المحتملون والصفقات لكل مسؤول في هذه الفترة، الأعلى قيمة مكسوبة أولاً.",
+      "empty": "لا توجد عملاء أو صفقات مسندة لأحد في هذه الفترة.",
+      "unknown": "موظف رقم {id}",
+      "columns": {
+        "employee": "الموظف",
+        "leads": "العملاء",
+        "leadsWon": "عملاء مكسوبون",
+        "conversion": "التحويل",
+        "deals": "الصفقات",
+        "dealsWon": "صفقات مكسوبة",
+        "wonValue": "قيمة المكسوب",
+        "commission": "العمولة"
+      }
+    }
+  },
+  "projects": {
+    "title": "المشاريع",
+    "description": "مشاريعك العقارية وعدد الوحدات المتاحة فيها.",
+    "searchPlaceholder": "ابحث في المشاريع…",
+    "availableOf": "{available} متاحة من {total}",
+    "statuses": {
+      "planning": "قيد التخطيط",
+      "selling": "قيد البيع",
+      "completed": "مكتمل"
+    },
+    "columns": {
+      "project": "المشروع",
+      "location": "الموقع",
+      "status": "الحالة",
+      "units": "الوحدات",
+      "delivery": "التسليم"
+    },
+    "actions": {
+      "create": "مشروع جديد",
+      "edit": "تعديل المشروع",
+      "delete": "حذف المشروع"
+    },
+    "form": {
+      "createTitle": "مشروع جديد",
+      "editTitle": "تعديل المشروع",
+      "description": "المشروع وموقعه ومرحلته."
+    },
+    "fields": {
+      "nameAr": "الاسم (عربي)",
+      "nameEn": "الاسم (إنجليزي)",
+      "code": "الرمز",
+      "status": "الحالة",
+      "city": "المدينة",
+      "district": "الحي",
+      "address": "العنوان",
+      "delivery": "تاريخ التسليم",
+      "description": "الوصف"
+    },
+    "delete": {
+      "title": "حذف {name}؟",
+      "description": "سيتم حذف المشروع نهائياً. لا يمكن حذف مشروع يحتوي على وحدات.",
+      "confirm": "حذف المشروع"
+    },
+    "empty": {
+      "title": "لا توجد مشاريع بعد",
+      "description": "أنشئ أول مشروع ثم أضف وحداته.",
+      "filteredTitle": "لا توجد مشاريع مطابقة",
+      "filteredDescription": "جرّب بحثاً مختلفاً أو امسح التصفيات."
+    },
+    "toast": {
+      "created": "تم إنشاء المشروع",
+      "updated": "تم تحديث المشروع",
+      "deleted": "تم حذف المشروع"
+    }
+  },
+  "units": {
+    "title": "الوحدات",
+    "description": "كل وحدة معروضة للبيع وسعرها وهل هي متاحة أو محجوزة أو مباعة.",
+    "searchPlaceholder": "ابحث في الوحدات…",
+    "sizeValue": "{area} م² · {bedrooms} غرف",
+    "types": {
+      "apartment": "شقة",
+      "villa": "فيلا",
+      "duplex": "دوبلكس",
+      "townhouse": "تاون هاوس",
+      "shop": "محل",
+      "office": "مكتب",
+      "land": "أرض"
+    },
+    "statuses": {
+      "available": "متاحة",
+      "reserved": "محجوزة",
+      "sold": "مباعة"
+    },
+    "columns": {
+      "unit": "الوحدة",
+      "type": "النوع",
+      "size": "المساحة",
+      "price": "السعر",
+      "status": "الحالة"
+    },
+    "actions": {
+      "create": "وحدة جديدة",
+      "menu": "إجراءات",
+      "reserve": "حجز لعميل",
+      "release": "إلغاء الحجز",
+      "sell": "تحديد كمباعة",
+      "edit": "تعديل",
+      "delete": "حذف",
+      "interests": "العملاء المهتمون",
+      "media": "الصور والملفات"
+    },
+    "interests": {
+      "title": "العملاء المهتمون بالوحدة {unit}",
+      "description": "قائمة مختصرة بالعملاء الذين سألوا عن هذه الوحدة، قبل أن يحجزها أحد.",
+      "empty": "لم يُبدِ أي عميل اهتماماً بعد.",
+      "remove": "إزالة الاهتمام",
+      "addTitle": "إضافة عميل مهتم",
+      "add": "إضافة",
+      "fields": {
+        "lead": "العميل",
+        "note": "ملاحظة"
+      },
+      "toast": {
+        "added": "تمت إضافة العميل إلى القائمة",
+        "removed": "تمت إزالة العميل من القائمة"
+      }
+    },
+    "media": {
+      "title": "صور وملفات الوحدة {unit}",
+      "description": "{count} من {max} ملفاً.",
+      "empty": "لا توجد صور أو ملفات بعد.",
+      "kind": "النوع",
+      "kinds": {
+        "photo": "صورة",
+        "floor_plan": "مخطط",
+        "brochure": "بروشور"
+      },
+      "hint": {
+        "photo": "JPG أو PNG أو WebP، حتى 10 ميجابايت.",
+        "floor_plan": "JPG أو PNG أو WebP، حتى 10 ميجابايت.",
+        "brochure": "PDF، حتى 10 ميجابايت."
+      },
+      "wrongType": {
+        "photo": "يجب أن تكون الصورة بصيغة JPG أو PNG أو WebP.",
+        "floor_plan": "يجب أن يكون المخطط صورة بصيغة JPG أو PNG أو WebP.",
+        "brochure": "يجب أن يكون البروشور ملف PDF."
+      },
+      "tooLarge": "حجم الملف أكبر من 10 ميجابايت.",
+      "full": "وصلت الوحدة إلى الحد الأقصى من الملفات. احذف ملفاً لتضيف غيره.",
+      "upload": "رفع ملف",
+      "uploadFailed": "تعذّر رفع الملف. حاول مرة أخرى.",
+      "delete": "حذف الملف",
+      "toast": {
+        "uploaded": "تم رفع الملف",
+        "deleted": "تم حذف الملف"
+      }
+    },
+    "form": {
+      "createTitle": "وحدة جديدة",
+      "editTitle": "تعديل الوحدة",
+      "description": "المشروع التابعة له ونوعها وسعرها."
+    },
+    "fields": {
+      "project": "المشروع",
+      "unitNumber": "رقم الوحدة",
+      "type": "النوع",
+      "status": "الحالة",
+      "area": "المساحة (م²)",
+      "floor": "الطابق",
+      "price": "السعر",
+      "bedrooms": "غرف النوم",
+      "bathrooms": "دورات المياه",
+      "notes": "ملاحظات"
+    },
+    "reserve": {
+      "title": "حجز {name}",
+      "description": "احجز هذه الوحدة لعميل. تعود للبيع عند انتهاء مدة الحجز.",
+      "lead": "العميل المحتمل",
+      "holdHours": "مدة الحجز (ساعات)",
+      "deposit": "العربون",
+      "confirm": "حجز الوحدة"
+    },
+    "release": {
+      "title": "إلغاء حجز {name}؟",
+      "description": "ستصبح الوحدة متاحة من جديد.",
+      "confirm": "إلغاء الحجز"
+    },
+    "sell": {
+      "title": "تحديد {name} كمباعة؟",
+      "description": "لن يمكن حجز الوحدة بعد ذلك.",
+      "confirm": "تحديد كمباعة"
+    },
+    "delete": {
+      "title": "حذف {name}؟",
+      "description": "سيتم حذف الوحدة نهائياً ولا يمكن التراجع.",
+      "confirm": "حذف الوحدة"
+    },
+    "empty": {
+      "title": "لا توجد وحدات بعد",
+      "description": "أضف وحدات إلى مشروع لتبدأ البيع.",
+      "filteredTitle": "لا توجد وحدات مطابقة",
+      "filteredDescription": "جرّب بحثاً مختلفاً أو امسح التصفيات."
+    },
+    "toast": {
+      "created": "تم إنشاء الوحدة",
+      "updated": "تم تحديث الوحدة",
+      "deleted": "تم حذف الوحدة",
+      "reserved": "تم حجز الوحدة",
+      "released": "تم إلغاء الحجز",
+      "sold": "تم تحديد الوحدة كمباعة"
+    }
+  },
+  "pipelineSettings": {
+    "title": "مسار المبيعات",
+    "description": "مراحل العملاء والصفقات، ومصادر العملاء، وطريقة توزيع العملاء الجدد.",
+    "empty": "لا يوجد شيء هنا بعد.",
+    "edit": "تعديل",
+    "flags": {
+      "won": "مكسوب",
+      "lost": "خاسر",
+      "inactive": "غير نشط"
+    },
+    "kinds": {
+      "lead-stages": {
+        "tab": "مراحل العملاء",
+        "title": "مراحل العملاء المحتملين",
+        "description": "الخطوات التي يمر بها العميل بالترتيب.",
+        "create": "مرحلة عميل جديدة",
+        "edit": "تعديل مرحلة العميل"
+      },
+      "lead-sources": {
+        "tab": "مصادر العملاء",
+        "title": "مصادر العملاء",
+        "description": "من أين يأتي عملاؤك.",
+        "create": "مصدر جديد",
+        "edit": "تعديل المصدر"
+      },
+      "deal-stages": {
+        "tab": "مراحل الصفقات",
+        "title": "مراحل الصفقات",
+        "description": "الخطوات التي تمر بها الصفقة بالترتيب.",
+        "create": "مرحلة صفقة جديدة",
+        "edit": "تعديل مرحلة الصفقة"
+      },
+      "rules": {
+        "tab": "التوزيع",
+        "title": "توزيع العملاء",
+        "description": "وزّع العملاء الجدد تلقائياً بين أعضاء الفريق.",
+        "create": "قاعدة جديدة",
+        "edit": "تعديل القاعدة"
+      }
+    },
+    "strategies": {
+      "round_robin": "بالتناوب",
+      "workload": "حسب الحمل (الأقل عملاء مفتوحين)"
+    },
+    "rules": {
+      "description": "اختر فريقاً وطريقة توزيع عملائه الجدد."
+    },
+    "form": {
+      "description": "الأسماء باللغتين؛ المفتاح يُحدد مرة واحدة ولا يتغير."
+    },
+    "fields": {
+      "nameAr": "الاسم (عربي)",
+      "nameEn": "الاسم (إنجليزي)",
+      "key": "المفتاح",
+      "keyHint": "حروف إنجليزية صغيرة وأرقام وشرطة سفلية. اتركه فارغاً لإنشائه تلقائياً.",
+      "position": "الترتيب",
+      "color": "اللون",
+      "colorHint": "لون سداسي مثل #3B82F6.",
+      "isWon": "يُحتسب كمكسوب",
+      "isLost": "يُحتسب كخاسر",
+      "isActive": "نشط",
+      "team": "الفريق",
+      "strategy": "طريقة التوزيع"
+    },
+    "delete": {
+      "title": "حذف {name}؟",
+      "description": "لا يمكن التراجع. أي عنصر ما زال يستخدمه سيمنع الحذف.",
+      "confirm": "حذف"
+    },
+    "toast": {
+      "saved": "تم الحفظ",
+      "deleted": "تم الحذف"
+    }
+  },
+  "exportRequests": {
+    "title": "طلبات التصدير",
+    "description": "عمليات تصدير العملاء التي تحتاج موافقة مدير قبل تنزيلها.",
+    "downloadFailed": "تعذر تنزيل الملف.",
+    "statuses": {
+      "pending": "قيد الانتظار",
+      "approved": "تمت الموافقة",
+      "rejected": "مرفوض"
+    },
+    "columns": {
+      "requestedBy": "طلب من",
+      "requestedAt": "تاريخ الطلب",
+      "status": "الحالة",
+      "decidedBy": "القرار"
+    },
+    "actions": {
+      "download": "تنزيل",
+      "approve": "موافقة",
+      "reject": "رفض"
+    },
+    "decision": {
+      "note": "ملاحظة",
+      "approve": {
+        "title": "الموافقة على تصدير {name}؟",
+        "description": "سيتمكن من تنزيل قائمة العملاء.",
+        "confirm": "موافقة"
+      },
+      "reject": {
+        "title": "رفض تصدير {name}؟",
+        "description": "لن يتمكن من تنزيله. يمكنك إضافة السبب.",
+        "confirm": "رفض"
+      }
+    },
+    "empty": {
+      "title": "لا توجد طلبات تصدير",
+      "description": "تظهر الطلبات هنا عندما يحتاج تصدير العملاء إلى موافقة."
+    },
+    "toast": {
+      "approved": "تمت الموافقة على التصدير",
+      "rejected": "تم رفض التصدير"
+    }
+  },
+  "channels": {
+    "title": "القنوات",
+    "description": "اربط واتساب والرسائل النصية وإعلانات فيسبوك ونماذج الويب لتصل العملاء والرسائل إلى هنا.",
+    "active": "نشطة",
+    "inactive": "غير نشطة",
+    "canSend": "يمكنها إرسال الرسائل",
+    "webhookUrl": "رابط Webhook",
+    "copy": "نسخ الرابط",
+    "lastReceived": "آخر استلام",
+    "neverReceived": "لم يصل شيء بعد",
+    "types": {
+      "whatsapp": "واتساب",
+      "sms": "رسائل نصية",
+      "facebook_lead_ads": "إعلانات فيسبوك",
+      "web_form": "نموذج ويب"
+    },
+    "actions": {
+      "create": "ربط جديد",
+      "edit": "تعديل",
+      "rotate": "رابط webhook جديد",
+      "delete": "حذف"
+    },
+    "form": {
+      "createTitle": "ربط قناة جديدة",
+      "editTitle": "تعديل ربط القناة",
+      "description": "بعد الحفظ، الصق رابط webhook في إعدادات المزود."
+    },
+    "fields": {
+      "type": "القناة",
+      "name": "الاسم",
+      "team": "توجيه العملاء الجدد إلى فريق",
+      "noTeam": "بدون فريق",
+      "sourceKey": "مفتاح مصدر العميل",
+      "sourceKeyHint": "اختياري. اتركه فارغاً لاستخدام مصدر القناة الافتراضي.",
+      "isActive": "نشطة"
+    },
+    "credentials": {
+      "title": "بيانات الاعتماد",
+      "hint": "يوفرها مزود القناة. تُحفظ بأمان ولا تُعرض مرة أخرى.",
+      "keepHint": "اترك الحقل فارغاً للإبقاء على القيمة المحفوظة.",
+      "isSet": "محفوظة مسبقاً",
+      "fields": {
+        "access_token": "رمز الوصول",
+        "phone_number_id": "معرّف رقم الهاتف",
+        "app_secret": "سر التطبيق",
+        "verify_token": "رمز التحقق",
+        "graph_version": "إصدار Graph (مثل v21.0)",
+        "account_sid": "Account SID",
+        "auth_token": "رمز المصادقة",
+        "from": "رقم المرسل (+...)",
+        "page_access_token": "رمز وصول الصفحة",
+        "secret": "السر المشترك"
+      }
+    },
+    "rotate": {
+      "title": "رابط webhook جديد لـ {name}؟",
+      "description": "سيتوقف الرابط القديم فوراً. حدّثه في إعدادات المزود.",
+      "confirm": "إنشاء رابط جديد",
+      "copyNew": "تم إنشاء الرابط الجديد. انسخه إلى إعدادات المزود."
+    },
+    "delete": {
+      "title": "حذف {name}؟",
+      "description": "تبقى الرسائل المستلمة على عملائها، لكن لن يصل أي جديد.",
+      "confirm": "حذف الربط"
+    },
+    "empty": {
+      "title": "لا توجد قنوات مربوطة",
+      "description": "اربط قناة لاستقبال العملاء ومراسلتهم من هنا."
+    },
+    "toast": {
+      "saved": "تم الحفظ",
+      "deleted": "تم الحذف",
+      "rotated": "تم استبدال رابط webhook"
+    }
+  },
+  "securityPolicy": {
+    "title": "الأمان",
+    "description": "تحكّم في مكان ووقت دخول فريقك، وما يحتاج إلى تحقق إضافي.",
+    "ownerNote": "تنطبق هذه القواعد على جميع الموظفين ما عدا مالك الشركة.",
+    "ownerNoteSelf": "تنطبق هذه القواعد على جميع الموظفين ما عداك: مالك الشركة لا يُمنع أبداً، فلا يمكن لإعداد خاطئ أن يغلق حسابك.",
+    "sections": {
+      "network": {
+        "title": "الشبكات المسموح بها",
+        "description": "لا يُقبل تسجيل الدخول إلا من هذه العناوين."
+      },
+      "hours": {
+        "title": "ساعات تسجيل الدخول",
+        "description": "يُرفض تسجيل الدخول خارج هذه الساعات. الأوقات بتوقيت الشركة."
+      },
+      "access": {
+        "title": "تحقق إضافي",
+        "description": "خطوات إضافية لتسجيل الدخول وتصدير البيانات."
+      }
+    },
+    "fields": {
+      "ipWhitelist": "عناوين IP ونطاقاتها",
+      "ipWhitelistHint": "عنوان في كل سطر، مثل 41.33.10.0/24. اتركه فارغاً للسماح بأي شبكة.",
+      "hoursEnabled": "حصر الدخول في ساعات محددة",
+      "from": "من",
+      "to": "إلى",
+      "overnightHint": "إذا كان وقت النهاية قبل البداية فالفترة تمتد بعد منتصف الليل (مثل 22:00 إلى 06:00).",
+      "days": "الأيام",
+      "daysHint": "اترك الأيام كلها دون تحديد للسماح بكل الأيام.",
+      "requireTwoFactor": "فرض التحقق بخطوتين",
+      "requireTwoFactorUnavailable": "غير متاح بعد: هذا التطبيق لا يدعم الدخول برمز التحقق بخطوتين، فتفعيله سيمنع الموظفين من الدخول. يمكن إيقافه فقط من هنا.",
+      "exportApproval": "التصدير يحتاج موافقة",
+      "exportApprovalHint": "ينتظر تصدير العملاء في طلبات التصدير حتى يوافق عليه أحد."
+    },
+    "days": {
+      "0": "الأحد",
+      "1": "الاثنين",
+      "2": "الثلاثاء",
+      "3": "الأربعاء",
+      "4": "الخميس",
+      "5": "الجمعة",
+      "6": "السبت"
+    },
+    "toast": {
+      "saved": "تم حفظ إعدادات الأمان"
+    }
+  },
+  "clinic": {
+    "services": {
+      "title": "الخدمات",
+      "description": "ما تقدمه عيادتك، ومدة كل زيارة، وتكلفتها.",
+      "searchPlaceholder": "ابحث في الخدمات…",
+      "active": "مفعّلة",
+      "inactive": "موقوفة",
+      "minutes": "{count} دقيقة",
+      "columns": {
+        "service": "الخدمة",
+        "duration": "المدة",
+        "price": "السعر",
+        "status": "الحالة"
+      },
+      "fields": {
+        "nameAr": "الاسم (عربي)",
+        "nameEn": "الاسم (إنجليزي)",
+        "code": "الكود",
+        "duration": "المدة (بالدقائق)",
+        "price": "السعر",
+        "isActive": "متاحة للحجز"
+      },
+      "actions": {
+        "create": "خدمة جديدة",
+        "edit": "تعديل الخدمة",
+        "delete": "حذف الخدمة"
+      },
+      "form": {
+        "createTitle": "خدمة جديدة",
+        "editTitle": "تعديل الخدمة",
+        "description": "المدة تحدد طول كل موعد لهذه الخدمة."
+      },
+      "delete": {
+        "title": "حذف {name}؟",
+        "description": "سيتم حذف الخدمة نهائياً ولا يمكن التراجع.",
+        "confirm": "حذف الخدمة"
+      },
+      "empty": {
+        "title": "لا توجد خدمات بعد",
+        "description": "أضف الخدمات التي يمكن للمرضى حجزها.",
+        "filteredTitle": "لا توجد خدمات مطابقة",
+        "filteredDescription": "جرّب بحثاً مختلفاً أو امسح التصفيات."
+      },
+      "toast": {
+        "created": "تم إنشاء الخدمة",
+        "updated": "تم تحديث الخدمة",
+        "deleted": "تم حذف الخدمة"
+      }
+    },
+    "appointments": {
+      "title": "المواعيد",
+      "description": "من محجوز مع أي طبيب، ولأي خدمة، ومتى.",
+      "statuses": {
+        "scheduled": "مجدول",
+        "completed": "مكتمل",
+        "cancelled": "ملغى",
+        "no_show": "لم يحضر"
+      },
+      "columns": {
+        "when": "الموعد",
+        "service": "الخدمة",
+        "lead": "المريض",
+        "doctor": "الطبيب",
+        "status": "الحالة"
+      },
+      "fields": {
+        "service": "الخدمة",
+        "lead": "المريض (العميل)",
+        "doctor": "الطبيب",
+        "startsAt": "وقت البداية",
+        "startsAtHint": "يجب أن يكون في المستقبل. ينتهي بعد مدة الخدمة.",
+        "status": "الحالة",
+        "notes": "ملاحظات"
+      },
+      "actions": {
+        "create": "موعد جديد",
+        "edit": "تعديل الموعد",
+        "delete": "حذف الموعد"
+      },
+      "form": {
+        "createTitle": "موعد جديد",
+        "editTitle": "تعديل الموعد",
+        "createDescription": "لا يمكن تغيير الخدمة أو المريض أو الطبيب بعد الحجز.",
+        "editDescription": "غيّر الوقت أو الحالة أو أضف ملاحظات."
+      },
+      "delete": {
+        "title": "حذف هذا الموعد؟",
+        "description": "سيتم حذف الموعد نهائياً ولا يمكن التراجع.",
+        "confirm": "حذف الموعد"
+      },
+      "empty": {
+        "title": "لا توجد مواعيد بعد",
+        "description": "احجز موعداً لمريض مع طبيب ليظهر هنا.",
+        "filteredTitle": "لا توجد مواعيد مطابقة",
+        "filteredDescription": "جرّب تصفيات أخرى أو امسحها."
+      },
+      "toast": {
+        "created": "تم حجز الموعد",
+        "updated": "تم تحديث الموعد",
+        "deleted": "تم حذف الموعد"
+      }
+    }
+  },
+  "education": {
+    "courses": {
+      "title": "الدورات",
+      "description": "دوراتك ومواعيدها ورسومها وعدد المقاعد المشغولة.",
+      "searchPlaceholder": "ابحث في الدورات…",
+      "active": "مفتوحة",
+      "inactive": "مغلقة",
+      "columns": {
+        "course": "الدورة",
+        "dates": "المواعيد",
+        "seats": "المقاعد",
+        "fee": "الرسوم",
+        "status": "الحالة"
+      },
+      "fields": {
+        "nameAr": "الاسم (عربي)",
+        "nameEn": "الاسم (إنجليزي)",
+        "code": "الكود",
+        "fee": "الرسوم",
+        "capacity": "عدد المقاعد",
+        "capacityHint": "اتركه فارغاً بلا حد أقصى.",
+        "startsOn": "تبدأ في",
+        "endsOn": "تنتهي في",
+        "isActive": "مفتوحة للتسجيل"
+      },
+      "actions": {
+        "create": "دورة جديدة",
+        "edit": "تعديل الدورة",
+        "delete": "حذف الدورة"
+      },
+      "form": {
+        "createTitle": "دورة جديدة",
+        "editTitle": "تعديل الدورة",
+        "description": "لا يمكن أن يقل عدد المقاعد عن عدد الطلاب المسجلين فعلاً."
+      },
+      "delete": {
+        "title": "حذف {name}؟",
+        "description": "سيتم حذف الدورة نهائياً. لا يمكن حذف دورة فيها تسجيلات.",
+        "confirm": "حذف الدورة"
+      },
+      "empty": {
+        "title": "لا توجد دورات بعد",
+        "description": "أضف دورة لتبدأ تسجيل الطلاب.",
+        "filteredTitle": "لا توجد دورات مطابقة",
+        "filteredDescription": "جرّب بحثاً مختلفاً أو امسح التصفيات."
+      },
+      "toast": {
+        "created": "تم إنشاء الدورة",
+        "updated": "تم تحديث الدورة",
+        "deleted": "تم حذف الدورة"
+      }
+    },
+    "enrollments": {
+      "title": "التسجيلات",
+      "description": "أي طالب في أي دورة، وإلى أين وصل.",
+      "statuses": {
+        "enrolled": "مسجّل",
+        "completed": "أتمّ الدورة",
+        "dropped": "انسحب"
+      },
+      "columns": {
+        "lead": "الطالب",
+        "course": "الدورة",
+        "enrolledOn": "تاريخ التسجيل",
+        "status": "الحالة"
+      },
+      "fields": {
+        "course": "الدورة",
+        "lead": "الطالب (العميل)",
+        "enrolledOn": "تاريخ التسجيل",
+        "status": "الحالة",
+        "notes": "ملاحظات"
+      },
+      "actions": {
+        "create": "تسجيل جديد",
+        "edit": "تعديل التسجيل",
+        "delete": "حذف التسجيل"
+      },
+      "form": {
+        "createTitle": "تسجيل جديد",
+        "editTitle": "تعديل التسجيل",
+        "createDescription": "لا يمكن تغيير الدورة أو الطالب بعد التسجيل.",
+        "editDescription": "حدّث الحالة أو التاريخ أو الملاحظات."
+      },
+      "delete": {
+        "title": "حذف هذا التسجيل؟",
+        "description": "سيتم حذف التسجيل نهائياً وتحرير مقعده.",
+        "confirm": "حذف التسجيل"
+      },
+      "empty": {
+        "title": "لا توجد تسجيلات بعد",
+        "description": "سجّل طالباً في دورة ليظهر هنا.",
+        "filteredTitle": "لا توجد تسجيلات مطابقة",
+        "filteredDescription": "جرّب تصفيات أخرى أو امسحها."
+      },
+      "toast": {
+        "created": "تم تسجيل الطالب",
+        "updated": "تم تحديث التسجيل",
+        "deleted": "تم حذف التسجيل"
+      }
+    }
+  },
+  "automotive": {
+    "vehicles": {
+      "title": "المركبات",
+      "description": "مخزونك: المتاح والمحجوز والمباع، وبأي سعر.",
+      "searchPlaceholder": "ابحث بالماركة أو الموديل أو رقم الشاسيه…",
+      "statuses": {
+        "available": "متاحة",
+        "reserved": "محجوزة",
+        "sold": "مباعة"
+      },
+      "columns": {
+        "vehicle": "المركبة",
+        "color": "اللون",
+        "price": "السعر",
+        "status": "الحالة"
+      },
+      "fields": {
+        "make": "الماركة",
+        "model": "الموديل",
+        "year": "سنة الصنع",
+        "color": "اللون",
+        "vin": "رقم الشاسيه (VIN)",
+        "price": "السعر",
+        "status": "الحالة"
+      },
+      "actions": {
+        "create": "مركبة جديدة",
+        "edit": "تعديل المركبة",
+        "delete": "حذف المركبة"
+      },
+      "form": {
+        "createTitle": "مركبة جديدة",
+        "editTitle": "تعديل المركبة",
+        "description": "لا يمكن حجز تجربة قيادة لمركبة مباعة."
+      },
+      "delete": {
+        "title": "حذف {name}؟",
+        "description": "سيتم حذف المركبة نهائياً. لا يمكن حذف مركبة لها تجارب قيادة.",
+        "confirm": "حذف المركبة"
+      },
+      "empty": {
+        "title": "لا توجد مركبات بعد",
+        "description": "أضف مخزونك لتحجز تجارب القيادة.",
+        "filteredTitle": "لا توجد مركبات مطابقة",
+        "filteredDescription": "جرّب بحثاً مختلفاً أو امسح التصفيات."
+      },
+      "toast": {
+        "created": "تمت إضافة المركبة",
+        "updated": "تم تحديث المركبة",
+        "deleted": "تم حذف المركبة"
+      }
+    },
+    "testDrives": {
+      "title": "تجارب القيادة",
+      "description": "من يجرّب أي سيارة، ومتى.",
+      "statuses": {
+        "scheduled": "مجدولة",
+        "completed": "مكتملة",
+        "cancelled": "ملغاة",
+        "no_show": "لم يحضر"
+      },
+      "columns": {
+        "when": "الموعد",
+        "vehicle": "المركبة",
+        "lead": "العميل",
+        "status": "الحالة"
+      },
+      "fields": {
+        "vehicle": "المركبة",
+        "lead": "العميل",
+        "startsAt": "وقت البداية",
+        "startsAtHint": "يجب أن يكون في المستقبل. لا يمكن حجز السيارة مرتين في الوقت نفسه.",
+        "status": "الحالة",
+        "notes": "ملاحظات"
+      },
+      "actions": {
+        "create": "تجربة قيادة جديدة",
+        "edit": "تعديل تجربة القيادة",
+        "delete": "حذف تجربة القيادة"
+      },
+      "form": {
+        "createTitle": "تجربة قيادة جديدة",
+        "editTitle": "تعديل تجربة القيادة",
+        "createDescription": "لا يمكن تغيير المركبة أو العميل بعد الحجز.",
+        "editDescription": "غيّر الوقت أو الحالة أو أضف ملاحظات."
+      },
+      "delete": {
+        "title": "حذف تجربة القيادة هذه؟",
+        "description": "سيتم حذف تجربة القيادة نهائياً ولا يمكن التراجع.",
+        "confirm": "حذف تجربة القيادة"
+      },
+      "empty": {
+        "title": "لا توجد تجارب قيادة بعد",
+        "description": "احجز تجربة قيادة لعميل لتظهر هنا.",
+        "filteredTitle": "لا توجد تجارب مطابقة",
+        "filteredDescription": "جرّب تصفيات أخرى أو امسحها."
+      },
+      "toast": {
+        "created": "تم حجز تجربة القيادة",
+        "updated": "تم تحديث تجربة القيادة",
+        "deleted": "تم حذف تجربة القيادة"
+      }
+    }
+  },
+  "agency": {
+    "packages": {
+      "title": "الباقات",
+      "description": "الخدمات التي تبيعها شهرياً، وما تشمله، ورسومها.",
+      "searchPlaceholder": "ابحث في الباقات…",
+      "active": "متاحة",
+      "inactive": "موقوفة",
+      "columns": {
+        "package": "الباقة",
+        "monthlyFee": "الرسوم الشهرية",
+        "activeEngagements": "عملاء نشطون",
+        "status": "الحالة"
+      },
+      "fields": {
+        "nameAr": "الاسم (عربي)",
+        "nameEn": "الاسم (إنجليزي)",
+        "code": "الكود",
+        "monthlyFee": "الرسوم الشهرية",
+        "deliverables": "ما تشمله الباقة",
+        "isActive": "متاحة للبيع"
+      },
+      "actions": {
+        "create": "باقة جديدة",
+        "edit": "تعديل الباقة",
+        "delete": "حذف الباقة"
+      },
+      "form": {
+        "createTitle": "باقة جديدة",
+        "editTitle": "تعديل الباقة",
+        "description": "التعاقدات الجديدة تأخذ هذه الرسوم ما لم تحدد لها رسوماً خاصة."
+      },
+      "delete": {
+        "title": "حذف {name}؟",
+        "description": "سيتم حذف الباقة نهائياً. لا يمكن حذف باقة لها تعاقدات.",
+        "confirm": "حذف الباقة"
+      },
+      "empty": {
+        "title": "لا توجد باقات بعد",
+        "description": "أضف الباقات التي تقدمها لعملائك.",
+        "filteredTitle": "لا توجد باقات مطابقة",
+        "filteredDescription": "جرّب بحثاً مختلفاً أو امسح التصفيات."
+      },
+      "toast": {
+        "created": "تم إنشاء الباقة",
+        "updated": "تم تحديث الباقة",
+        "deleted": "تم حذف الباقة"
+      }
+    },
+    "engagements": {
+      "title": "التعاقدات",
+      "description": "أي عميل على أي باقة، وبكم، ومنذ متى.",
+      "statuses": {
+        "proposed": "مقترح",
+        "active": "نشط",
+        "paused": "متوقف مؤقتاً",
+        "ended": "منتهٍ"
+      },
+      "columns": {
+        "lead": "العميل",
+        "package": "الباقة",
+        "monthlyFee": "الرسوم الشهرية",
+        "period": "المدة",
+        "status": "الحالة"
+      },
+      "fields": {
+        "package": "الباقة",
+        "lead": "العميل",
+        "status": "الحالة",
+        "monthlyFee": "الرسوم الشهرية",
+        "monthlyFeeHint": "اتركه فارغاً لاستخدام رسوم الباقة.",
+        "startsOn": "يبدأ في",
+        "endsOn": "ينتهي في",
+        "notes": "ملاحظات"
+      },
+      "actions": {
+        "create": "تعاقد جديد",
+        "edit": "تعديل التعاقد",
+        "delete": "حذف التعاقد"
+      },
+      "form": {
+        "createTitle": "تعاقد جديد",
+        "editTitle": "تعديل التعاقد",
+        "createDescription": "يبدأ كمقترح. لا يمكن تغيير الباقة أو العميل بعد ذلك.",
+        "editDescription": "لا يمكن إعادة فتح تعاقد منتهٍ."
+      },
+      "delete": {
+        "title": "حذف هذا التعاقد؟",
+        "description": "سيتم حذف التعاقد نهائياً ولا يمكن التراجع.",
+        "confirm": "حذف التعاقد"
+      },
+      "empty": {
+        "title": "لا توجد تعاقدات بعد",
+        "description": "اربط عميلاً بباقة ليظهر هنا.",
+        "filteredTitle": "لا توجد تعاقدات مطابقة",
+        "filteredDescription": "جرّب تصفيات أخرى أو امسحها."
+      },
+      "toast": {
+        "created": "تم إنشاء التعاقد",
+        "updated": "تم تحديث التعاقد",
+        "deleted": "تم حذف التعاقد"
+      }
+    }
+  }
+}

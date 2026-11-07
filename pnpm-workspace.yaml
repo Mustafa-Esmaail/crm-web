@@ -1,0 +1,28 @@
+packages:
+  - apps/*
+  - packages/*
+
+# Single source of truth for versions shared across workspaces.
+allowBuilds:
+  '@parcel/watcher': true
+  '@swc/core': true
+  unrs-resolver: true
+
+catalog:
+  next: ^16.4.3
+  react: ^19.3.1
+  react-dom: ^19.3.1
+  # typescript-eslint caps its peer range at <6.1, so TS 7 is not usable yet.
+  typescript: ~6.0.3
+  '@types/react': ^19.3.0
+  '@types/react-dom': ^19.3.0
+  '@types/node': ^26.6.6
+  tailwindcss: ^4.3.3
+  '@tailwindcss/postcss': ^4.3.3
+  zod: ^4.6.7
+  eslint: ^9.39.5
+  prettier: ^3.9.10
+  vitest: ^5.0.5
+
+minimumReleaseAgeExclude:
+  - lucide-react@1.65.0

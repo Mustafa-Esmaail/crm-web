@@ -1,0 +1,143 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import './tokens.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--surface);
+  --color-card-foreground: var(--foreground);
+  --color-popover: var(--surface);
+  --color-popover-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-muted: var(--surface-2);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-secondary-foreground: var(--text-secondary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-faint: var(--text-faint);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-input: var(--border-strong);
+  --color-ring: var(--ring);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-soft-2: var(--primary-soft-2);
+  --color-secondary: var(--surface-2);
+  --color-accent: var(--primary-soft);
+  --color-accent-foreground: var(--primary);
+  --color-accent-amber: var(--accent-color);
+  --color-accent-amber-soft: var(--accent-soft);
+
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-destructive: var(--destructive);
+  --color-destructive-soft: var(--destructive-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-elevated: var(--sidebar-elevated);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-heading: var(--sidebar-heading);
+  --color-sidebar-active: var(--sidebar-active-bg);
+  --color-sidebar-active-foreground: var(--sidebar-active-fg);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: 0.5rem;
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius-card);
+  --radius-pill: 999px;
+
+  --shadow-card: var(--elevation-card);
+  --shadow-dialog: var(--elevation-dialog);
+
+  --font-sans: var(--font-plex-arabic), var(--font-inter), sans-serif;
+  --font-numeric: var(--font-inter), var(--font-plex-arabic), sans-serif;
+
+  --text-title: 22px;
+  --text-card-title: 15px;
+  --text-small: 12.5px;
+  --text-caption: 11.5px;
+
+  --color-focus-glow: var(--ring-glow);
+  --color-on-dark: var(--on-dark);
+  --color-on-dark-muted: var(--on-dark-muted);
+
+  --shadow-logo: var(--elevation-logo);
+  --background-image-logo: var(--gradient-logo);
+  --background-image-brand-panel: var(--gradient-brand-panel);
+  --background-image-profile-cover: var(--gradient-profile-cover);
+
+  /* Control heights from the design spec: button 38, field 42, CTA 46, chip 30, row 56. */
+  --spacing-control: 2.375rem;
+  --spacing-field: 2.625rem;
+  --spacing-cta: 2.875rem;
+  --spacing-chip: 1.875rem;
+  --spacing-row: 3.5rem;
+
+  --spacing-topbar: 4rem;
+  --spacing-sidebar: 15.5rem;
+  --spacing-sidebar-collapsed: 4.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  /* The 14px base applies to text only; a 14px html root would shrink every rem-based spacing token. */
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: 14px;
+  }
+  /* Numbers use Inter via .num; whole tables must not, or Inter would swallow Arabic text. */
+  .num,
+  [data-numeric] {
+    font-family: var(--font-numeric);
+  }
+  .num,
+  [data-numeric],
+  table {
+    font-variant-numeric: tabular-nums;
+  }
+  :focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px var(--ring-glow);
+    border-color: var(--ring);
+  }
+}
+
+/* A thin, low-contrast scrollbar for dark surfaces, where the OS default glares. */
+@utility scrollbar-subtle {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sidebar-heading) transparent;
+}
+
+/* Same idea for light/dark content areas, using the neutral border token. */
+@utility scrollbar-neutral {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+}
+
+/* Dotted canvas behind the org chart. */
+@utility chart-grid {
+  background-image: radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+@utility ltr-field {
+  direction: ltr;
+  text-align: end;
+}
