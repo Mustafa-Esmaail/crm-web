@@ -52,6 +52,14 @@ jobs:
           pnpm typecheck
           pnpm test
 
+      - name: 6. Build the release and start it like the server does (smoke test)
+        env:
+          NEXT_OUTPUT: standalone
+        run: |
+          pnpm --filter @crm/app build
+          bash .github/scripts/assemble-release.sh
+          bash .github/scripts/smoke-test.sh
+
   build-and-deploy:
     needs: test
     if: github.event_name != 'pull_request'
@@ -78,23 +86,8 @@ jobs:
           NEXT_OUTPUT: standalone
         run: pnpm --filter @crm/app build
 
-      - name: 6. Assemble the release folder
-        # server.js does not include static assets; Next serves them once they sit next to it.
-        # start.cjs loads the server's .env (it is never uploaded) and then starts server.js.
-        run: |
-          set -e
-          APP=apps/app
-          OUT=$APP/.next/standalone
-          mkdir -p $OUT/$APP/.next
-          cp -r $APP/.next/static $OUT/$APP/.next/static
-          if [ -d $APP/public ]; then cp -r $APP/public $OUT/$APP/public; fi
-          cat > $OUT/$APP/start.cjs <<'EOF'
-          // Loads ~/crm-web/.env (server-only, never uploaded), then starts Next's standalone server.
-          const path = require('node:path');
-          process.loadEnvFile(path.join(__dirname, '..', '..', '.env'));
-          require('./server.js');
-          EOF
-          test -f $OUT/$APP/server.js
+      - name: 6. Assemble the release folder (the same script the smoke test used)
+        run: bash .github/scripts/assemble-release.sh
 
       - name: 7. Deploy over SSH
         uses: easingthemes/ssh-deploy@v5.1.0
