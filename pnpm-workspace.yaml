@@ -2,6 +2,10 @@ packages:
   - apps/*
   - packages/*
 
+# A flat node_modules: Next's standalone build (what the server runs) misses packages that pnpm's
+# default nested layout keeps beside `next` (e.g. @swc/helpers), and the deployed app then crashes.
+nodeLinker: hoisted
+
 # Single source of truth for versions shared across workspaces.
 allowBuilds:
   '@parcel/watcher': true
