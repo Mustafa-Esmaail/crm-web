@@ -31,10 +31,12 @@ const STAGE_FIELDS = ['stage_id', 'lost_reason'];
 
 interface DealStageDialogProps {
   deal: Deal;
+  /** Pre-selected target, e.g. the column a card was dropped on. */
+  initialStageId?: number;
   onClose: () => void;
 }
 
-export function DealStageDialog({ deal, onClose }: DealStageDialogProps) {
+export function DealStageDialog({ deal, initialStageId, onClose }: DealStageDialogProps) {
   const t = useTranslations('deals.stage');
   const tCommon = useTranslations('common');
   const [alertMessages, setAlertMessages] = useState<string[]>([]);
@@ -42,7 +44,7 @@ export function DealStageDialog({ deal, onClose }: DealStageDialogProps) {
   const change = useChangeDealStage();
 
   const { control, handleSubmit, setError } = useZodForm(dealStageChangeSchema, {
-    stage_id: '',
+    stage_id: initialStageId === undefined ? '' : String(initialStageId),
     lost_reason: '',
   });
   const targets = getDealMoveTargets(deal, pipeline.data ?? []);

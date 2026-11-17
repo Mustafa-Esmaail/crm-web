@@ -56,6 +56,15 @@ export function toStageChangePayload(
   };
 }
 
+/** Board columns: every stage gets an entry, even when empty; leads without a stage are skipped. */
+export function groupLeadsByStage(leads: Lead[], stages: LeadStage[]): Map<number, Lead[]> {
+  const columns = new Map<number, Lead[]>(stages.map((stage) => [stage.id, []]));
+  for (const lead of leads) {
+    if (lead.stage) columns.get(lead.stage.id)?.push(lead);
+  }
+  return columns;
+}
+
 /** Stages a lead can move to: every stage except the one it is already in. */
 export function getMoveTargets(lead: Lead, stages: LeadStage[]): LeadStage[] {
   return stages.filter((stage) => stage.id !== lead.stage?.id);

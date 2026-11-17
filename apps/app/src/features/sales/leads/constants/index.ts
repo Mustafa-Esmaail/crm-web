@@ -23,6 +23,12 @@ export const UNASSIGNED_VALUE = '1';
 
 export const LEAD_DEFAULT_PAGE_SIZE = 15;
 
+export const LEAD_VIEWS = ['list', 'board'] as const;
+export type LeadView = (typeof LEAD_VIEWS)[number];
+
+/** The board loads one page of this size (the API's max per_page) instead of paginating. */
+export const LEAD_BOARD_LIMIT = 100;
+
 /** What a salesperson can log against a lead; keys match the API's `type` enum. */
 export const ACTIVITY_TYPES = ['note', 'call', 'meeting', 'whatsapp', 'email'] as const;
 export type ActivityType = (typeof ACTIVITY_TYPES)[number];
