@@ -13,7 +13,7 @@ allowBuilds:
   unrs-resolver: true
 
 catalog:
-  next: ^16.4.3
+  next: ^16.4.6
   react: ^19.3.1
   react-dom: ^19.3.1
   # typescript-eslint caps its peer range at <6.1, so TS 7 is not usable yet.
