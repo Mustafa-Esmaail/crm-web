@@ -6,6 +6,13 @@
     "optional": "optional",
     "close": "Close"
   },
+  "meta": {
+    "title": "Smart CRM | Clients, team and deals in one place",
+    "description": "Arabic and English CRM for real-estate, clinics, education, automotive and agencies: clients, deals, tasks, branches and teams, with precise permissions and a full log of every change.",
+    "ogAlt": "Smart CRM: your clients, team and deals in one place",
+    "loginTitle": "Sign in",
+    "registerTitle": "Register your company"
+  },
   "nav": {
     "label": "Main navigation",
     "comingSoon": "Soon",
