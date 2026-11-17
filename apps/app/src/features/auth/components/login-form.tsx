@@ -2,7 +2,7 @@
 
 import { isApiError } from '@crm/api-client';
 import { Button } from '@crm/ui';
-import { ArrowRight, CirclePlay, Loader2, Lock, Mail } from 'lucide-react';
+import { ArrowRight, Loader2, Lock, Mail } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
@@ -12,9 +12,10 @@ import { mapLaravelErrorsToForm } from '@/shared/components/form/map-laravel-err
 import { TextField } from '@/shared/components/form/text-field';
 import { useZodForm } from '@/shared/components/form/use-zod-form';
 
-import { DEMO_CREDENTIALS, IS_DEMO_LOGIN_ENABLED } from '../constants';
+import { DEMO_PASSWORD, IS_DEMO_LOGIN_ENABLED } from '../constants';
 import { useLoginMutation } from '../hooks/use-session-mutations';
 import { loginSchema, type LoginValues } from '../schemas';
+import { DemoAccountsPanel } from './demo-accounts-panel';
 
 const LOGIN_FIELDS = ['email', 'password'];
 
@@ -75,33 +76,26 @@ export function LoginForm() {
         </Button>
       </form>
 
-      {IS_DEMO_LOGIN_ENABLED && (
+      {IS_DEMO_LOGIN_ENABLED ? (
         <>
           <div className="text-caption text-text-faint flex items-center gap-3" aria-hidden>
             <span className="bg-border h-px flex-1" />
             {t('login.or')}
             <span className="bg-border h-px flex-1" />
           </div>
-          <Button
-            type="button"
-            variant="outline"
-            size="lg"
-            className="w-full"
-            disabled={login.isPending}
-            onClick={() => submit(DEMO_CREDENTIALS)}
-          >
-            <CirclePlay aria-hidden />
-            {t('login.demo')}
-          </Button>
+          <DemoAccountsPanel
+            pendingEmail={login.isPending ? (login.variables?.email ?? null) : null}
+            onSignIn={(email) => submit({ email, password: DEMO_PASSWORD })}
+          />
         </>
+      ) : (
+        <p className="text-small text-muted-foreground text-center">
+          {t('login.noAccount')}{' '}
+          <Link href="/register" className="text-primary font-semibold hover:underline">
+            {t('login.register')}
+          </Link>
+        </p>
       )}
-
-      <p className="text-small text-muted-foreground text-center">
-        {t('login.noAccount')}{' '}
-        <Link href="/register" className="text-primary font-semibold hover:underline">
-          {t('login.register')}
-        </Link>
-      </p>
     </div>
   );
 }

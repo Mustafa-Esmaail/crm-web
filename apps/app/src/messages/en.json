@@ -231,7 +231,27 @@
       "demo": "Try the demo account",
       "or": "or",
       "noAccount": "New here?",
-      "register": "Register your company"
+      "register": "Register your company",
+      "demoGuide": {
+        "title": "Try the demo",
+        "description": "A sample real-estate company with ready data. Pick a role and sign in with one click — every demo account uses the password “password”.",
+        "signInAs": "Sign in as {role}",
+        "ownTitle": "Want to try with your own data?",
+        "ownDescription": "Create a fresh workspace for your company in a minute.",
+        "ownAction": "Create my own account",
+        "roles": {
+          "owner": "Owner",
+          "owner_hint": "Full access to everything",
+          "sales_manager": "Sales manager",
+          "sales_manager_hint": "Sees all sales teams and reports",
+          "marketing": "Marketing",
+          "marketing_hint": "Campaigns and lead sources",
+          "team_leader": "Team leader",
+          "team_leader_hint": "Manages one sales team",
+          "sales_agent": "Sales agent",
+          "sales_agent_hint": "Works their own leads and deals"
+        }
+      }
     },
     "register": {
       "title": "Register your company",
@@ -610,6 +630,16 @@
     "searchPlaceholder": "Search by name, phone or email…",
     "unassigned": "Unassigned",
     "noActivity": "No activity yet",
+    "views": {
+      "list": "List",
+      "board": "Pipeline"
+    },
+    "board": {
+      "count": "{count, plural, one {# lead} other {# leads}}",
+      "empty": "Drop a lead here",
+      "limit": "Showing the first {limit} of {total} leads. Narrow the filters to see the rest.",
+      "hint": "Drag a card to another column to change its stage."
+    },
     "filters": {
       "stage": "Stage",
       "source": "Source",
@@ -770,7 +800,8 @@
     "board": {
       "count": "{count, plural, one {# deal} other {# deals}}",
       "empty": "No deals here",
-      "limit": "Showing the first {limit} of {total} deals. Narrow the filters to see the rest."
+      "limit": "Showing the first {limit} of {total} deals. Narrow the filters to see the rest.",
+      "hint": "Drag a card to another column to change its stage."
     },
     "filters": {
       "stage": "Stage",

@@ -31,10 +31,12 @@ const STAGE_FIELDS = ['stage_id', 'lost_reason'];
 
 interface ChangeStageDialogProps {
   lead: Lead;
+  /** Pre-selected target, e.g. the column a card was dropped on. */
+  initialStageId?: number;
   onClose: () => void;
 }
 
-export function ChangeStageDialog({ lead, onClose }: ChangeStageDialogProps) {
+export function ChangeStageDialog({ lead, initialStageId, onClose }: ChangeStageDialogProps) {
   const t = useTranslations('leads.stage');
   const tCommon = useTranslations('common');
   const [alertMessages, setAlertMessages] = useState<string[]>([]);
@@ -42,7 +44,7 @@ export function ChangeStageDialog({ lead, onClose }: ChangeStageDialogProps) {
   const change = useChangeLeadStage();
 
   const { control, handleSubmit, setError } = useZodForm(changeStageSchema, {
-    stage_id: '',
+    stage_id: initialStageId === undefined ? '' : String(initialStageId),
     lost_reason: '',
   });
   const targets = getMoveTargets(lead, stages.data ?? []);

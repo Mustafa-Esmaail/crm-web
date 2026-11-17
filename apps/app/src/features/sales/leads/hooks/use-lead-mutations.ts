@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 
 import { useRefreshAuditLogs } from '@/features/audit';
+import { patchCachedLists } from '@/lib/api/patch-cached-lists';
 import { useHttpClient } from '@/shared/hooks/use-http-client';
 import { useToastUnexpectedError } from '@/shared/hooks/use-toast-unexpected-error';
 
@@ -18,6 +19,7 @@ import {
 } from '../api/lead-requests';
 import { leadKeys } from '../constants';
 import type { ActivityFormValues, LeadFormValues } from '../schemas';
+import type { Lead, LeadStage } from '../types';
 import { toLeadPayload } from '../utils/mappers';
 
 /** A lead appears in lists, stage counters and its own page, and every change is audited. */
@@ -87,10 +89,13 @@ interface ChangeStageInput {
   id: number;
   stageId: number;
   lostReason: string | null;
+  /** The target stage, when known, moves the lead in cached lists before the server answers. */
+  stage?: LeadStage;
 }
 
 export function useChangeLeadStage() {
   const http = useHttpClient();
+  const queryClient = useQueryClient();
   const refresh = useRefreshLeads();
   const t = useTranslations('leads');
   const toastUnexpected = useToastUnexpectedError();
@@ -98,11 +103,15 @@ export function useChangeLeadStage() {
   return useMutation({
     mutationFn: ({ id, stageId, lostReason }: ChangeStageInput) =>
       changeLeadStage(http, id, { stage_id: stageId, lost_reason: lostReason }),
+    onMutate: async ({ id, stage }) => {
+      if (stage) await patchCachedLists<Lead>(queryClient, leadKeys.lists(), id, { stage });
+    },
     onSuccess: () => {
-      refresh();
       toast.success(t('toast.stageChanged'));
     },
     onError: toastUnexpected,
+    // Also on failure: the refetch puts an optimistically moved lead back where it was.
+    onSettled: refresh,
   });
 }
 

@@ -10,6 +10,7 @@ import { FormattedDate } from '@/shared/components/display/formatted-date';
 import { StageBadge } from '@/shared/components/display/stage-badge';
 import { UserAvatar } from '@/shared/components/display/user-avatar';
 import { ErrorState } from '@/shared/components/feedback/error-state';
+import { useStageDrag } from '@/shared/hooks/use-stage-drag';
 
 import type { Deal, DealStage } from '../types';
 import { groupByStage } from '../utils/mappers';
@@ -22,15 +23,36 @@ interface DealBoardProps {
   error?: unknown;
   onRetry: () => void;
   actions: DealActions;
+  /** Whether the reader may drag deals between stages. */
+  canMove: boolean;
+  onMove: (deal: Deal, stage: DealStage) => void;
 }
 
 /**
- * One column per pipeline stage. Deals move with the card menu rather than by dragging, which
- * keeps the board usable by keyboard and screen reader; a drag layer can be added on top later.
+ * One column per pipeline stage. Deals can be dragged between columns; the card menu's
+ * "Change stage" stays as the keyboard and screen-reader path.
  */
-export function DealBoard({ stages, deals, isLoading, error, onRetry, actions }: DealBoardProps) {
+export function DealBoard({
+  stages,
+  deals,
+  isLoading,
+  error,
+  onRetry,
+  actions,
+  canMove,
+  onMove,
+}: DealBoardProps) {
   const t = useTranslations('deals');
   const columns = useMemo(() => groupByStage(deals, stages ?? []), [deals, stages]);
+  const drag = useStageDrag<Deal>({
+    isEnabled: canMove,
+    getId: (deal) => deal.id,
+    getStageId: (deal) => deal.stage?.id,
+    onMove: (deal, stageId) => {
+      const stage = stages?.find((candidate) => candidate.id === stageId);
+      if (stage) onMove(deal, stage);
+    },
+  });
 
   if (error) return <ErrorState error={error} onRetry={onRetry} />;
   if (isLoading || !stages) {
@@ -52,7 +74,8 @@ export function DealBoard({ stages, deals, isLoading, error, onRetry, actions }:
           <section
             key={stage.id}
             aria-label={stage.name}
-            className="bg-muted/60 w-72 shrink-0 space-y-3 rounded-lg border p-3"
+            className="bg-muted/60 data-[drop-target]:border-primary data-[drop-target]:bg-primary-soft w-72 shrink-0 space-y-3 rounded-lg border p-3 transition-colors"
+            {...drag.columnProps(stage.id)}
           >
             <header className="flex items-center justify-between gap-2">
               <StageBadge name={stage.name} color={stage.color} />
@@ -66,7 +89,11 @@ export function DealBoard({ stages, deals, isLoading, error, onRetry, actions }:
 
             <ul className="space-y-2">
               {cards.map((deal) => (
-                <li key={deal.id} className="bg-card shadow-card space-y-2 rounded-md border p-3">
+                <li
+                  key={deal.id}
+                  className="bg-card shadow-card space-y-2 rounded-md border p-3 data-[dragging]:opacity-50 [&[draggable=true]]:cursor-grab"
+                  {...drag.cardProps(deal)}
+                >
                   <div className="flex items-start justify-between gap-2">
                     <Link
                       href={`/deals/${deal.id}`}

@@ -92,4 +92,26 @@ describe('LoginForm', () => {
 
     await waitFor(() => expect(replace).toHaveBeenCalledWith('/'), SLOW);
   });
+
+  it('signs in with one click as a demo role and offers a real account', async () => {
+    let sent: { email: string; password: string } | undefined;
+    server.use(
+      http.post(`${API_ORIGIN}/api/auth/login`, async ({ request }) => {
+        sent = (await request.json()) as { email: string; password: string };
+        return HttpResponse.json({ user });
+      }),
+    );
+    replace.mockClear();
+    renderForm();
+
+    expect(screen.getByRole('link', { name: /Create my own account/ })).toHaveAttribute(
+      'href',
+      '/register',
+    );
+
+    await userEvent.click(screen.getByRole('button', { name: 'Sign in as Sales manager' }));
+
+    await waitFor(() => expect(replace).toHaveBeenCalledWith('/'), SLOW);
+    expect(sent).toMatchObject({ email: 'sales.director@demo.test', password: 'password' });
+  });
 });
