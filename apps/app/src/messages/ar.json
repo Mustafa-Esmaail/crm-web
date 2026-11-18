@@ -47,7 +47,9 @@
       "automotiveVehicles": "المركبات",
       "automotiveTestDrives": "تجارب القيادة",
       "agencyPackages": "الباقات",
-      "agencyEngagements": "التعاقدات"
+      "agencyEngagements": "التعاقدات",
+      "reports": "التقارير",
+      "myPerformance": "أدائي"
     }
   },
   "shell": {
@@ -1132,45 +1134,159 @@
   },
   "dashboard": {
     "title": "لوحة التحكم",
-    "description": "أداء العملاء المحتملين والصفقات.",
-    "periods": {
-      "7": "٧ أيام",
-      "30": "٣٠ يوماً",
-      "90": "٩٠ يوماً",
-      "all": "كل الفترات"
+    "description": "أهم أرقام العملاء والصفقات والمهام والنشاط في كل ما تستطيع رؤيته.",
+    "myDescription": "أداؤك أنت: عملاؤك وصفقاتك ونشاطك ومهامك.",
+    "myPerformance": "أدائي",
+    "allReports": "كل التقارير"
+  },
+  "reports": {
+    "title": "التقارير",
+    "description": "تابع المبيعات والفريق والنشاط. كل الأرقام في حدود ما تسمح لك صلاحياتك برؤيته.",
+    "tabs": {
+      "overview": "نظرة عامة",
+      "sales": "المبيعات",
+      "team": "أداء الموظفين",
+      "activities": "النشاط"
+    },
+    "filters": {
+      "periods": {
+        "7": "٧ أيام",
+        "30": "٣٠ يوماً",
+        "90": "٩٠ يوماً",
+        "365": "سنة",
+        "all": "كل الفترات",
+        "custom": "فترة مخصصة"
+      },
+      "from": "من تاريخ",
+      "to": "إلى تاريخ",
+      "until": "إلى",
+      "employee": "الموظف",
+      "team": "الفريق"
+    },
+    "delta": {
+      "same": "بدون تغيير",
+      "new": "جديد",
+      "previous": "الفترة السابقة: {value}"
     },
     "kpi": {
       "leads": "العملاء المحتملون",
       "leadsOpen": "{count} مفتوح",
       "conversion": "معدل التحويل",
       "leadsWon": "{count} تم كسبه",
-      "deals": "الصفقات",
-      "dealsOpen": "{count} مفتوحة",
       "dealsWon": "الصفقات المكسوبة",
-      "dealsLost": "{count} خاسرة",
-      "pipelineValue": "قيمة الصفقات المفتوحة",
+      "dealsSummary": "{open} مفتوحة · {lost} خاسرة",
       "wonValue": "قيمة المكسوب",
-      "commission": "العمولة"
+      "pipelineValue": "المفتوح",
+      "commission": "العمولة",
+      "activities": "الأنشطة المسجلة",
+      "calls": "منها {count} مكالمة",
+      "firstResponse": "متوسط سرعة أول تواصل",
+      "responded": "تم التواصل مع {responded} من {total}",
+      "staleLeads": "عملاء مهملون",
+      "staleOf": "من {open} مفتوح، بلا نشاط منذ {days} أيام",
+      "tasksCompleted": "المهام المنجزة",
+      "tasksDetail": "{onTime}% في موعدها · {overdue} متأخرة"
     },
-    "byStage": "العملاء حسب المرحلة",
-    "bySource": "العملاء حسب المصدر",
+    "time": {
+      "minutes": "{count} دقيقة",
+      "hours": "{count} ساعة",
+      "days": "{count} يوم"
+    },
+    "charts": {
+      "newLeads": "العملاء الجدد يومياً",
+      "byStage": "العملاء حسب المرحلة",
+      "bySource": "العملاء حسب المصدر"
+    },
     "noSource": "بدون مصدر",
     "empty": "لا توجد بيانات لهذه الفترة",
+    "export": "تصدير CSV",
+    "sales": {
+      "revenue": "الإيرادات المحققة",
+      "wonDeals": "{count} صفقة مكسوبة",
+      "winRate": "نسبة الفوز",
+      "winRateHint": "المكسوب من الصفقات المغلقة",
+      "avgDeal": "متوسط قيمة الصفقة",
+      "cycle": "متوسط مدة البيع",
+      "cycleHint": "من فتح الصفقة حتى كسبها",
+      "pipeline": "مسار الصفقات",
+      "pipelineHint": "الصفقات التي أُنشئت في الفترة حسب المرحلة وقيمتها.",
+      "revenueByMonth": "الإيرادات شهرياً",
+      "revenueByMonthHint": "حسب تاريخ إغلاق الصفقة.",
+      "forecast": "توقعات الإغلاق",
+      "forecastHint": "الصفقات المفتوحة الآن حسب تاريخ الإغلاق المتوقع.",
+      "buckets": {
+        "overdue": "متأخرة عن موعدها",
+        "next_30": "خلال ٣٠ يوماً",
+        "next_60": "خلال ٣١–٦٠ يوماً",
+        "next_90": "خلال ٦١–٩٠ يوماً",
+        "later": "بعد ٩٠ يوماً",
+        "no_date": "بدون تاريخ"
+      },
+      "lostLeads": "أسباب خسارة العملاء",
+      "lostDeals": "أسباب خسارة الصفقات",
+      "noLosses": "لا توجد خسائر في هذه الفترة",
+      "noReason": "بدون سبب مسجل"
+    },
     "agents": {
-      "title": "أداء الفريق",
-      "description": "العملاء المحتملون والصفقات لكل مسؤول في هذه الفترة، الأعلى قيمة مكسوبة أولاً.",
-      "empty": "لا توجد عملاء أو صفقات مسندة لأحد في هذه الفترة.",
+      "title": "أداء الموظفين",
+      "description": "كل موظف: مبيعاته ونشاطه وسرعة تواصله وحالة عملائه ومهامه. اضغط على الاسم لتقرير تفصيلي، وعلى عنوان العمود للترتيب.",
+      "empty": "لا يوجد عمل مسند لأحد في هذه الفترة.",
       "unknown": "موظف رقم {id}",
+      "open": "تقرير {name}",
       "columns": {
         "employee": "الموظف",
         "leads": "العملاء",
-        "leadsWon": "عملاء مكسوبون",
-        "conversion": "التحويل",
-        "deals": "الصفقات",
-        "dealsWon": "صفقات مكسوبة",
-        "wonValue": "قيمة المكسوب",
-        "commission": "العمولة"
+        "conversion_rate": "التحويل",
+        "deals_won": "صفقات مكسوبة",
+        "won_value": "قيمة المكسوب",
+        "commission": "العمولة",
+        "activities": "الأنشطة",
+        "calls": "مكالمات",
+        "meetings": "اجتماعات",
+        "avg_first_response_hours": "سرعة التواصل",
+        "open_leads": "عملاء مفتوحون",
+        "stale_leads": "مهملون",
+        "tasks_completed": "مهام منجزة",
+        "tasks_overdue": "مهام متأخرة",
+        "tasks_on_time_rate": "الالتزام بالمواعيد"
       }
+    },
+    "teams": {
+      "title": "أداء الفرق",
+      "description": "العملاء والصفقات لكل فريق في هذه الفترة.",
+      "noTeam": "بدون فريق",
+      "columns": {
+        "team": "الفريق",
+        "leads": "العملاء",
+        "leads_won": "مكسوبون",
+        "leads_lost": "خاسرون",
+        "conversion_rate": "التحويل",
+        "deals": "الصفقات",
+        "deals_won": "صفقات مكسوبة",
+        "won_value": "قيمة المكسوب"
+      }
+    },
+    "activities": {
+      "perDay": "الأنشطة يومياً",
+      "byType": "الأنشطة حسب النوع",
+      "byEmployee": "الأنشطة لكل موظف",
+      "empty": "لا توجد أنشطة مسجلة في هذه الفترة",
+      "total": "الإجمالي"
+    },
+    "activityTypes": {
+      "call": "مكالمات",
+      "meeting": "اجتماعات",
+      "whatsapp": "واتساب",
+      "email": "بريد إلكتروني",
+      "note": "ملاحظات"
+    },
+    "scorecard": {
+      "title": "تقرير الموظف",
+      "employeeTitle": "تقرير أداء {name}",
+      "employeeDescription": "عمل الموظف في الفترة مقارنة بالفترة السابقة.",
+      "profile": "الملف الشخصي",
+      "myTitle": "أدائي",
+      "myDescription": "عملاؤك وصفقاتك ونشاطك ومهامك، مقارنة بالفترة السابقة."
     }
   },
   "projects": {

@@ -47,7 +47,9 @@
       "automotiveVehicles": "Vehicles",
       "automotiveTestDrives": "Test drives",
       "agencyPackages": "Packages",
-      "agencyEngagements": "Engagements"
+      "agencyEngagements": "Engagements",
+      "reports": "Reports",
+      "myPerformance": "My performance"
     }
   },
   "shell": {
@@ -1132,45 +1134,159 @@
   },
   "dashboard": {
     "title": "Dashboard",
-    "description": "How your leads and deals are performing.",
-    "periods": {
-      "7": "7 days",
-      "30": "30 days",
-      "90": "90 days",
-      "all": "All time"
+    "description": "Headline numbers for leads, deals, tasks and activity across everything you can see.",
+    "myDescription": "Your own performance: your leads, deals, activity and tasks.",
+    "myPerformance": "My performance",
+    "allReports": "All reports"
+  },
+  "reports": {
+    "title": "Reports",
+    "description": "Follow sales, people and activity. Every number stays within what your permissions let you see.",
+    "tabs": {
+      "overview": "Overview",
+      "sales": "Sales",
+      "team": "Employee performance",
+      "activities": "Activity"
+    },
+    "filters": {
+      "periods": {
+        "7": "7 days",
+        "30": "30 days",
+        "90": "90 days",
+        "365": "1 year",
+        "all": "All time",
+        "custom": "Custom"
+      },
+      "from": "From date",
+      "to": "To date",
+      "until": "to",
+      "employee": "Employee",
+      "team": "Team"
+    },
+    "delta": {
+      "same": "No change",
+      "new": "New",
+      "previous": "Previous period: {value}"
     },
     "kpi": {
       "leads": "Leads",
       "leadsOpen": "{count} open",
       "conversion": "Conversion rate",
       "leadsWon": "{count} won",
-      "deals": "Deals",
-      "dealsOpen": "{count} open",
       "dealsWon": "Deals won",
-      "dealsLost": "{count} lost",
-      "pipelineValue": "Open pipeline value",
+      "dealsSummary": "{open} open · {lost} lost",
       "wonValue": "Won value",
-      "commission": "Commission"
+      "pipelineValue": "Open",
+      "commission": "Commission",
+      "activities": "Logged activities",
+      "calls": "{count} calls",
+      "firstResponse": "Avg. first response",
+      "responded": "{responded} of {total} contacted",
+      "staleLeads": "Neglected leads",
+      "staleOf": "Of {open} open, untouched for {days} days",
+      "tasksCompleted": "Tasks completed",
+      "tasksDetail": "{onTime}% on time · {overdue} overdue"
     },
-    "byStage": "Leads by stage",
-    "bySource": "Leads by source",
+    "time": {
+      "minutes": "{count} min",
+      "hours": "{count} h",
+      "days": "{count} days"
+    },
+    "charts": {
+      "newLeads": "New leads per day",
+      "byStage": "Leads by stage",
+      "bySource": "Leads by source"
+    },
     "noSource": "No source",
     "empty": "No data for this period",
+    "export": "Export CSV",
+    "sales": {
+      "revenue": "Revenue won",
+      "wonDeals": "{count} deals won",
+      "winRate": "Win rate",
+      "winRateHint": "Won share of closed deals",
+      "avgDeal": "Average deal size",
+      "cycle": "Average sales cycle",
+      "cycleHint": "From opening a deal to winning it",
+      "pipeline": "Deal pipeline",
+      "pipelineHint": "Deals created in the period, by stage, with their value.",
+      "revenueByMonth": "Revenue per month",
+      "revenueByMonthHint": "By the date the deal was closed.",
+      "forecast": "Closing forecast",
+      "forecastHint": "Deals open right now, by expected close date.",
+      "buckets": {
+        "overdue": "Past due",
+        "next_30": "Next 30 days",
+        "next_60": "In 31–60 days",
+        "next_90": "In 61–90 days",
+        "later": "After 90 days",
+        "no_date": "No date"
+      },
+      "lostLeads": "Why leads were lost",
+      "lostDeals": "Why deals were lost",
+      "noLosses": "Nothing lost in this period",
+      "noReason": "No reason given"
+    },
     "agents": {
-      "title": "Team performance",
-      "description": "Leads and deals per owner in this period, highest won value first.",
-      "empty": "No leads or deals owned by anyone in this period.",
+      "title": "Employee performance",
+      "description": "Each employee's sales, activity, response speed, lead health and tasks. Click a name for the full report and a column header to sort.",
+      "empty": "Nobody has assigned work in this period.",
       "unknown": "Employee #{id}",
+      "open": "{name}'s report",
       "columns": {
         "employee": "Employee",
         "leads": "Leads",
-        "leadsWon": "Leads won",
-        "conversion": "Conversion",
-        "deals": "Deals",
-        "dealsWon": "Deals won",
-        "wonValue": "Won value",
-        "commission": "Commission"
+        "conversion_rate": "Conversion",
+        "deals_won": "Deals won",
+        "won_value": "Won value",
+        "commission": "Commission",
+        "activities": "Activities",
+        "calls": "Calls",
+        "meetings": "Meetings",
+        "avg_first_response_hours": "Response speed",
+        "open_leads": "Open leads",
+        "stale_leads": "Neglected",
+        "tasks_completed": "Tasks done",
+        "tasks_overdue": "Overdue tasks",
+        "tasks_on_time_rate": "On time"
       }
+    },
+    "teams": {
+      "title": "Team performance",
+      "description": "Leads and deals per team in this period.",
+      "noTeam": "No team",
+      "columns": {
+        "team": "Team",
+        "leads": "Leads",
+        "leads_won": "Won",
+        "leads_lost": "Lost",
+        "conversion_rate": "Conversion",
+        "deals": "Deals",
+        "deals_won": "Deals won",
+        "won_value": "Won value"
+      }
+    },
+    "activities": {
+      "perDay": "Activities per day",
+      "byType": "Activities by type",
+      "byEmployee": "Activities per employee",
+      "empty": "No activity logged in this period",
+      "total": "Total"
+    },
+    "activityTypes": {
+      "call": "Calls",
+      "meeting": "Meetings",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "note": "Notes"
+    },
+    "scorecard": {
+      "title": "Employee report",
+      "employeeTitle": "{name}'s performance",
+      "employeeDescription": "This employee's work in the period, compared with the previous one.",
+      "profile": "Profile",
+      "myTitle": "My performance",
+      "myDescription": "Your leads, deals, activity and tasks, compared with the previous period."
     }
   },
   "projects": {
