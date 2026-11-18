@@ -4,6 +4,9 @@ import userEvent from '@testing-library/user-event';
 import { http, HttpResponse } from 'msw';
 import { describe, expect, it, vi } from 'vitest';
 
+import { createFetchHttpClient } from '@/lib/api/http-client';
+import { HttpClientContext } from '@/shared/hooks/use-http-client';
+
 import { renderWithIntl } from '../../../../tests/render';
 import { API_ORIGIN, server } from '../../../../tests/server';
 import { LoginForm } from './login-form';
@@ -30,11 +33,34 @@ const user = {
   last_login_at: null,
 };
 
-function renderForm() {
+const DEMO_ON = {
+  enabled: true,
+  password: 'password',
+  accounts: [
+    { role: 'owner', email: 'owner@demo.test' },
+    { role: 'sales_manager', email: 'sales.director@demo.test' },
+  ],
+};
+const DEMO_OFF = { enabled: false, accounts: [] };
+
+const httpClient = createFetchHttpClient({
+  baseUrl: `${API_ORIGIN}/api/proxy`,
+  getLocale: () => 'en',
+  getFallbackMessage: () => 'fallback',
+  onUnauthorized: () => undefined,
+});
+
+/** The API's DEMO flag decides whether the demo panel shows; it is off unless a test turns it on. */
+function renderForm({ demo = DEMO_OFF }: { demo?: typeof DEMO_ON | typeof DEMO_OFF } = {}) {
+  server.use(
+    http.get(`${API_ORIGIN}/api/proxy/auth/demo`, () => HttpResponse.json({ data: demo })),
+  );
   const client = new QueryClient({ defaultOptions: { mutations: { retry: false } } });
   return renderWithIntl(
     <QueryClientProvider client={client}>
-      <LoginForm />
+      <HttpClientContext.Provider value={httpClient}>
+        <LoginForm />
+      </HttpClientContext.Provider>
     </QueryClientProvider>,
   );
 }
@@ -102,16 +128,28 @@ describe('LoginForm', () => {
       }),
     );
     replace.mockClear();
-    renderForm();
+    renderForm({ demo: DEMO_ON });
 
+    const signInAsManager = await screen.findByRole(
+      'button',
+      { name: 'Sign in as Sales manager' },
+      SLOW,
+    );
     expect(screen.getByRole('link', { name: /Create my own account/ })).toHaveAttribute(
       'href',
       '/register',
     );
 
-    await userEvent.click(screen.getByRole('button', { name: 'Sign in as Sales manager' }));
+    await userEvent.click(signInAsManager);
 
     await waitFor(() => expect(replace).toHaveBeenCalledWith('/'), SLOW);
     expect(sent).toMatchObject({ email: 'sales.director@demo.test', password: 'password' });
+  });
+
+  it('hides the demo when the API has it switched off', async () => {
+    renderForm({ demo: DEMO_OFF });
+
+    expect(await screen.findByRole('link', { name: 'Register your company' }, SLOW)).toBeVisible();
+    expect(screen.queryByRole('button', { name: /Sign in as/ })).not.toBeInTheDocument();
   });
 });

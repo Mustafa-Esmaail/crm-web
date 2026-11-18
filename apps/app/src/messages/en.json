@@ -234,7 +234,7 @@
       "register": "Register your company",
       "demoGuide": {
         "title": "Try the demo",
-        "description": "A sample real-estate company with ready data. Pick a role and sign in with one click — every demo account uses the password “password”.",
+        "description": "A sample real-estate company with ready data. Pick a role and sign in with one click — every demo account uses the password “{password}”.",
         "signInAs": "Sign in as {role}",
         "ownTitle": "Want to try with your own data?",
         "ownDescription": "Create a fresh workspace for your company in a minute.",
