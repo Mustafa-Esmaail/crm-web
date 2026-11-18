@@ -12,19 +12,8 @@ export const SUPPORTED_FORM_LOCALES = ['ar', 'en'] as const;
 
 export const DEVICE_NAME = 'web';
 
-/** Seeded by crm-api's DemoCompanySeeder; the demo panel is hidden in production builds. */
-export const DEMO_PASSWORD = 'password';
-export const DEMO_CREDENTIALS = { email: 'owner@demo.test', password: DEMO_PASSWORD } as const;
-
-/** One seeded account per role; `role` is the key under auth.login.demoGuide.roles. */
-export const DEMO_ACCOUNTS = [
-  { role: 'owner', email: 'owner@demo.test' },
-  { role: 'sales_manager', email: 'sales.director@demo.test' },
-  { role: 'marketing', email: 'marketing@demo.test' },
-  { role: 'team_leader', email: 'leader.cairo.a@demo.test' },
-  { role: 'sales_agent', email: 'agent.cairo.a1@demo.test' },
-] as const;
-
-export type DemoRole = (typeof DEMO_ACCOUNTS)[number]['role'];
-
-export const IS_DEMO_LOGIN_ENABLED = process.env.NODE_ENV !== 'production';
+/**
+ * Seeded by crm-api's DemoCompanySeeder; used by the e2e helpers. The login page itself gets the
+ * demo accounts from the API (GET /auth/demo), which only offers them while its DEMO flag is on.
+ */
+export const DEMO_CREDENTIALS = { email: 'owner@demo.test', password: 'password' } as const;

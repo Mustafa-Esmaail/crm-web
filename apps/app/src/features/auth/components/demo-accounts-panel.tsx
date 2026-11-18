@@ -17,9 +17,9 @@ import { useTranslations } from 'next-intl';
 
 import { Link } from '@/lib/i18n/navigation';
 
-import { DEMO_ACCOUNTS, type DemoRole } from '../constants';
+import type { DemoConfig } from '../api/demo-requests';
 
-const ROLE_ICONS: Record<DemoRole, LucideIcon> = {
+const ROLE_ICONS: Partial<Record<string, LucideIcon>> = {
   owner: Crown,
   sales_manager: Briefcase,
   marketing: Megaphone,
@@ -28,13 +28,21 @@ const ROLE_ICONS: Record<DemoRole, LucideIcon> = {
 };
 
 type DemoAccountsPanelProps = {
+  /** The accounts the API offers, one per role. */
+  accounts: DemoConfig['accounts'];
+  password: string;
   /** Email of the account currently signing in, if any. */
   pendingEmail: string | null;
   onSignIn: (email: string) => void;
 };
 
 /** Demo guide on the login page: one-click sign-in per seeded role, plus a way out to a real account. */
-export function DemoAccountsPanel({ pendingEmail, onSignIn }: DemoAccountsPanelProps) {
+export function DemoAccountsPanel({
+  accounts,
+  password,
+  pendingEmail,
+  onSignIn,
+}: DemoAccountsPanelProps) {
   const t = useTranslations('auth.login.demoGuide');
   const isBusy = pendingEmail !== null;
 
@@ -49,23 +57,27 @@ export function DemoAccountsPanel({ pendingEmail, onSignIn }: DemoAccountsPanelP
             <Sparkles className="text-primary size-4" aria-hidden />
             {t('title')}
           </h2>
-          <p className="text-caption text-muted-foreground">{t('description')}</p>
+          <p className="text-caption text-muted-foreground">{t('description', { password })}</p>
         </div>
 
         <ul className="divide-border divide-y">
-          {DEMO_ACCOUNTS.map(({ role, email }) => {
-            const Icon = ROLE_ICONS[role];
-            const roleName = t(`roles.${role}`);
+          {accounts.map(({ role, email }) => {
+            const Icon = ROLE_ICONS[role] ?? UserRound;
+            // A role the web app has no label for yet still gets a usable button.
+            const hasLabel = t.has(`roles.${role}`);
+            const roleName = hasLabel ? t(`roles.${role}`) : email;
             const isPending = pendingEmail === email;
 
             return (
-              <li key={role} className="flex items-center gap-3 py-2.5 first:pt-0 last:pb-0">
+              <li key={email} className="flex items-center gap-3 py-2.5 first:pt-0 last:pb-0">
                 <span className="bg-surface-2 text-primary flex size-9 shrink-0 items-center justify-center rounded-md">
                   <Icon className="size-4" aria-hidden />
                 </span>
                 <div className="min-w-0 flex-1">
                   <p className="text-small font-medium">{roleName}</p>
-                  <p className="text-caption text-muted-foreground">{t(`roles.${role}_hint`)}</p>
+                  {hasLabel && (
+                    <p className="text-caption text-muted-foreground">{t(`roles.${role}_hint`)}</p>
+                  )}
                   <p className="text-caption text-text-faint truncate" dir="ltr">
                     {email}
                   </p>

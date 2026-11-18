@@ -12,7 +12,7 @@ import { mapLaravelErrorsToForm } from '@/shared/components/form/map-laravel-err
 import { TextField } from '@/shared/components/form/text-field';
 import { useZodForm } from '@/shared/components/form/use-zod-form';
 
-import { DEMO_PASSWORD, IS_DEMO_LOGIN_ENABLED } from '../constants';
+import { useDemoConfig } from '../hooks/use-demo-config';
 import { useLoginMutation } from '../hooks/use-session-mutations';
 import { loginSchema, type LoginValues } from '../schemas';
 import { DemoAccountsPanel } from './demo-accounts-panel';
@@ -24,6 +24,12 @@ export function LoginForm() {
   const [alertMessages, setAlertMessages] = useState<string[]>([]);
   const { control, handleSubmit, setError } = useZodForm(loginSchema, { email: '', password: '' });
   const login = useLoginMutation();
+  const demo = useDemoConfig();
+  // The API's DEMO flag decides; nothing is offered until it says so.
+  const demoAccess =
+    demo.data?.enabled && demo.data.password && demo.data.accounts.length > 0
+      ? { accounts: demo.data.accounts, password: demo.data.password }
+      : null;
 
   const submit = (values: LoginValues) => {
     setAlertMessages([]);
@@ -76,7 +82,7 @@ export function LoginForm() {
         </Button>
       </form>
 
-      {IS_DEMO_LOGIN_ENABLED ? (
+      {demoAccess ? (
         <>
           <div className="text-caption text-text-faint flex items-center gap-3" aria-hidden>
             <span className="bg-border h-px flex-1" />
@@ -84,8 +90,10 @@ export function LoginForm() {
             <span className="bg-border h-px flex-1" />
           </div>
           <DemoAccountsPanel
+            accounts={demoAccess.accounts}
+            password={demoAccess.password}
             pendingEmail={login.isPending ? (login.variables?.email ?? null) : null}
-            onSignIn={(email) => submit({ email, password: DEMO_PASSWORD })}
+            onSignIn={(email) => submit({ email, password: demoAccess.password })}
           />
         </>
       ) : (
