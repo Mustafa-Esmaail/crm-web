@@ -4,6 +4,7 @@ import {
   Building2,
   CalendarClock,
   Car,
+  ChartColumnBig,
   ClipboardList,
   FileDown,
   Gauge,
@@ -23,6 +24,7 @@ import {
   Stethoscope,
   Target,
   UserRound,
+  UserRoundCheck,
   Users,
   UsersRound,
   Warehouse,
@@ -55,7 +57,22 @@ export interface NavSection {
 export const NAVIGATION: NavSection[] = [
   {
     id: 'main',
-    items: [{ id: 'home', labelKey: 'home', href: '/', icon: Home }],
+    items: [
+      { id: 'home', labelKey: 'home', href: '/', icon: Home },
+      {
+        id: 'reports',
+        labelKey: 'reports',
+        href: '/reports',
+        icon: ChartColumnBig,
+        permission: PERMISSIONS.reportsView,
+      },
+      {
+        id: 'my-performance',
+        labelKey: 'myPerformance',
+        href: '/my-performance',
+        icon: UserRoundCheck,
+      },
+    ],
   },
   {
     id: 'sales',
