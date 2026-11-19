@@ -241,6 +241,22 @@
         "ownTitle": "Want to try with your own data?",
         "ownDescription": "Create a fresh workspace for your company in a minute.",
         "ownAction": "Create my own account",
+        "lead": {
+          "description": "Leave your name and mobile number to open the demo.",
+          "name": "Your name",
+          "country": "Country",
+          "phone": "Mobile number",
+          "submit": "Open the demo",
+          "countries": {
+            "EG": "🇪🇬 +20",
+            "SA": "🇸🇦 +966",
+            "AE": "🇦🇪 +971",
+            "KW": "🇰🇼 +965",
+            "QA": "🇶🇦 +974",
+            "BH": "🇧🇭 +973",
+            "OM": "🇴🇲 +968"
+          }
+        },
         "roles": {
           "owner": "Owner",
           "owner_hint": "Full access to everything",

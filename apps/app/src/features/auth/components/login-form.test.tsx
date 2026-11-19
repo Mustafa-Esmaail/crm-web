@@ -9,6 +9,7 @@ import { HttpClientContext } from '@/shared/hooks/use-http-client';
 
 import { renderWithIntl } from '../../../../tests/render';
 import { API_ORIGIN, server } from '../../../../tests/server';
+import { LEAD_STORAGE_KEY } from './demo-accounts-panel';
 import { LoginForm } from './login-form';
 
 vi.setConfig({ testTimeout: 30_000 });
@@ -119,7 +120,32 @@ describe('LoginForm', () => {
     await waitFor(() => expect(replace).toHaveBeenCalledWith('/'), SLOW);
   });
 
+  it('asks for a name and phone before the demo opens', async () => {
+    window.localStorage.clear();
+    let lead: Record<string, string> | undefined;
+    server.use(
+      http.post(`${API_ORIGIN}/api/proxy/auth/demo/leads`, async ({ request }) => {
+        lead = (await request.json()) as Record<string, string>;
+        return HttpResponse.json({ data: { sent: true } });
+      }),
+    );
+    renderForm({ demo: DEMO_ON });
+
+    await userEvent.type(await screen.findByLabelText(/Your name/, {}, SLOW), 'Ahmed');
+    expect(screen.queryByRole('button', { name: /Sign in as/ })).not.toBeInTheDocument();
+
+    await userEvent.type(screen.getByLabelText(/Mobile number/), '01012345678');
+    await userEvent.click(screen.getByRole('button', { name: /Open the demo/ }));
+
+    expect(
+      await screen.findByRole('button', { name: 'Sign in as Owner' }, SLOW),
+    ).toBeInTheDocument();
+    expect(lead).toMatchObject({ name: 'Ahmed', phone_country: 'EG', phone: '01012345678' });
+    expect(window.localStorage.getItem(LEAD_STORAGE_KEY)).toBe('1');
+  });
+
   it('signs in with one click as a demo role and offers a real account', async () => {
+    window.localStorage.setItem(LEAD_STORAGE_KEY, '1');
     let sent: { email: string; password: string } | undefined;
     server.use(
       http.post(`${API_ORIGIN}/api/auth/login`, async ({ request }) => {
