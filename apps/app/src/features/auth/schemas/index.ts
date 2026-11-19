@@ -28,5 +28,15 @@ export const registerSchema = z
     message: 'validation.passwordMismatch',
   });
 
+/** Countries the demo phone form offers; the API checks the number against each one's mobile format. */
+export const DEMO_PHONE_COUNTRIES = ['EG', 'SA', 'AE', 'KW', 'QA', 'BH', 'OM'] as const;
+
+export const demoLeadSchema = z.object({
+  name: z.string().trim().min(2, required).max(100, 'validation.maxLength'),
+  phone_country: z.enum(DEMO_PHONE_COUNTRIES),
+  phone: z.string().trim().min(1, required).max(30, 'validation.maxLength'),
+});
+
 export type LoginValues = z.infer<typeof loginSchema>;
+export type DemoLeadValues = z.infer<typeof demoLeadSchema>;
 export type RegisterValues = z.infer<typeof registerSchema>;

@@ -14,10 +14,29 @@ import {
   Users,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { useState, useSyncExternalStore } from 'react';
 
 import { Link } from '@/lib/i18n/navigation';
 
 import type { DemoConfig } from '../api/demo-requests';
+import { DemoLeadForm } from './demo-lead-form';
+
+/** Set once the visitor left their phone, so they are not asked again on this browser. */
+export const LEAD_STORAGE_KEY = 'crm.demo-lead-sent';
+
+function subscribeToStorage(onChange: () => void) {
+  window.addEventListener('storage', onChange);
+  return () => window.removeEventListener('storage', onChange);
+}
+
+function readStoredLead() {
+  try {
+    return window.localStorage.getItem(LEAD_STORAGE_KEY) === '1';
+  } catch {
+    // Storage blocked: the visitor is simply asked again.
+    return false;
+  }
+}
 
 const ROLE_ICONS: Partial<Record<string, LucideIcon>> = {
   owner: Crown,
@@ -45,6 +64,19 @@ export function DemoAccountsPanel({
 }: DemoAccountsPanelProps) {
   const t = useTranslations('auth.login.demoGuide');
   const isBusy = pendingEmail !== null;
+  // The server renders "not yet"; the browser then reads what it stored on an earlier visit.
+  const hasStoredLead = useSyncExternalStore(subscribeToStorage, readStoredLead, () => false);
+  const [hasJustLeftPhone, setHasJustLeftPhone] = useState(false);
+  const hasLeftPhone = hasStoredLead || hasJustLeftPhone;
+
+  const unlock = () => {
+    try {
+      window.localStorage.setItem(LEAD_STORAGE_KEY, '1');
+    } catch {
+      // Storage blocked: the demo still opens for this visit.
+    }
+    setHasJustLeftPhone(true);
+  };
 
   return (
     <div className="space-y-4">
@@ -57,10 +89,14 @@ export function DemoAccountsPanel({
             <Sparkles className="text-primary size-4" aria-hidden />
             {t('title')}
           </h2>
-          <p className="text-caption text-muted-foreground">{t('description', { password })}</p>
+          {hasLeftPhone && (
+            <p className="text-caption text-muted-foreground">{t('description', { password })}</p>
+          )}
         </div>
 
-        <ul className="divide-border divide-y">
+        {!hasLeftPhone && <DemoLeadForm onDone={unlock} />}
+
+        <ul className="divide-border divide-y" hidden={!hasLeftPhone}>
           {accounts.map(({ role, email }) => {
             const Icon = ROLE_ICONS[role] ?? UserRound;
             // A role the web app has no label for yet still gets a usable button.
