@@ -3,7 +3,7 @@ name: Test and Deploy Web
 # Same model as the API: GitHub Actions tests, builds, uploads over SSH and starts the app.
 #   - The app (a standalone Next.js server) lives in ~/crm-web, OUTSIDE public_html, so its code and
 #     .env can never be downloaded.
-#   - The subdomain crm-web.mkdir-solutions.com (public_html/crm-web) only gets an .htaccess that tells
+#   - The subdomain crm-web.mkdir-solutions.com (public_html/subdomains/crm-web) only gets an .htaccess that tells
 #     the server's LiteSpeed to run the app with Node (the same "Passenger" settings a Node.js app
 #     setup writes), and LiteSpeed starts and stops the Node process itself.
 # GitHub secrets: SSH_KEY, SSH_HOST, SSH_USER, SSH_PORT (the hosting account, as for the API).
@@ -123,7 +123,7 @@ jobs:
         run: |
           {
             printf 'export APP_DIR=%q\n' "/home/$SSH_USER/crm-web"
-            printf 'export DOCROOT=%q\n' "/home/$SSH_USER/domains/mkdir-solutions.com/public_html/crm-web"
+            printf 'export DOCROOT=%q\n' "/home/$SSH_USER/domains/mkdir-solutions.com/public_html/subdomains/crm-web"
             printf 'export API_BASE_URL=%q\n' "$API_BASE_URL"
             printf 'export SITE_URL=%q\n' "$SITE_URL"
             cat .github/scripts/server-after-deploy.sh
